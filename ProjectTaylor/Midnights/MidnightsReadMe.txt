@@ -1,0 +1,23 @@
+num of songs: 22
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights1.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights2.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights3.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights4.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights5.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights6.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights7.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights8.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights9.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights10.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights11.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights12.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights13.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights14.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights15.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights16.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights17.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights18.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights19.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights20.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights21.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights22.txt

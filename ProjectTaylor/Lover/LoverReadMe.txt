@@ -1,0 +1,20 @@
+num of songs: 19
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover1.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover2.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover3.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover4.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover5.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover6.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover7.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover8.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover9.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover10.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover11.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover12.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover13.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover14.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover15.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover16.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover17.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover18.txt
+C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover19.txt
