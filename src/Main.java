@@ -1,8 +1,8 @@
 import java.io.*;
-import java.util.Arrays;
 import java.util.Scanner;// Used to read from the user or files
 import java.lang.Integer; // used for the ParseInt method
 import java.util.Random;// Used to generate a random song
+import java.util.HashMap;
 
 
 
@@ -41,7 +41,7 @@ public class Main
                 System.out.println("Hello ! Pick one of the options :\n0 to get a random Taylor song\n1 to look up a word \n2 to get Songs/Albums length information :");
                 System.out.print("----->");
                 MainPick = Keyboard.nextInt();
-                InputCheck(0,2,Keyboard,MainPick);
+                InputCheck(0,3,Keyboard,MainPick);
                 if(MainPick == 1)//The user picked to look up a word
                 {
                     System.out.println("\nPlease enter the word you'd like to search : ");
@@ -143,6 +143,11 @@ public class Main
                         }
                     }
                 }
+                else if(MainPick == 3)
+                {
+                    HashMap<String,HashMap<String,DurationAndLyrics>> FullHash = DurationAndLyrics.CreateDiscographyHash(args[0]);
+                    System.out.println(FullHash);
+                }
                 System.out.println("Would you like to go again ? choose any number to continue or 0 to exit ");
                 System.out.print("----->");
                 IfRunAgain = Keyboard.nextInt();
@@ -156,6 +161,7 @@ public class Main
         System.out.println("I'll tell you the truth, but never goodbye");
 
     }
+
 
 
     public static void InputCheck(int MinAllowed,int MaxAllowed,Scanner Keyboard,int input)

@@ -10,7 +10,6 @@ public class Song {
 
     int DurationInSec;//Holds the duration of the song in seconds.
 
-
     public Song()
     {
         this.SongName = "";
