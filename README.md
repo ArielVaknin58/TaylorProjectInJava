@@ -1,4 +1,4 @@
-# TaylorProjectInJavaa
+# TaylorProjectInJava
 
 This project is a continuation of my other TaylorProject - but in the Java language.
 My main idea to navigate between the files was to create a "monkey ladder" - start from one file and from that to be able to get to the rest.
