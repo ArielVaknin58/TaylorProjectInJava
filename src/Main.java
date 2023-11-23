@@ -24,7 +24,7 @@ public class Main
     public static void main(String[] args)
     {
 
-        int again = 1;
+        int IfRunAgain = 1;
 
 
         Printers.PrintWelcomeBanner();
@@ -34,25 +34,19 @@ public class Main
             File file = new File(args[0]);
             Album[] array = CreateDiscographyArray(file);
 
-            while(again != 0) // Main loop. repeats until its requested to exit
+            while(IfRunAgain != 0) // Main loop. repeats until its requested to exit
             {
                 int counter = 0;
-                int pick = 0;
-                Song song = new Song();
+                int MainPick = 0;
                 System.out.println("Hello ! Pick one of the options :\n0 to get a random Taylor song\n1 to look up a word \n2 to get Songs/Albums length information :");
                 System.out.print("----->");
-                pick = Keyboard.nextInt();
-                while((pick != 0 )&& (pick != 1) && (pick != 2))//Input check
-                {
-                    System.out.println("Invalid input, Please try again.");
-                    System.out.print("----->");
-                    pick = Keyboard.nextInt();
-                }
-                if(pick == 1)//The user picked to look up a word
+                MainPick = Keyboard.nextInt();
+                InputCheck(0,2,Keyboard,MainPick);
+                if(MainPick == 1)//The user picked to look up a word
                 {
                     System.out.println("\nPlease enter the word you'd like to search : ");
                     System.out.print("----->");
-                    song.Word = Keyboard.next();
+                    String word = Keyboard.next();
                     String temp;
                     Scanner FileReader = new Scanner(file);
                     temp = FileReader.nextLine();
@@ -61,109 +55,73 @@ public class Main
                     System.out.println("In which album would you like to search ? choose 1-" + DiscographyLength + " or 0 for the entire discography :");
                     System.out.print("----->");
                     Printers.PrintAlbums();
-                    pick = Keyboard.nextInt();
-                    while((pick > DiscographyLength)||(pick < 0))//Input check
-                    {
-                        System.out.println("Invalid input, Please try again.");
-                        System.out.print("----->");
-                        pick = Keyboard.nextInt();
-                    }
-                    if (pick == 0)// The user picked to search in the entire discography
+                    int AlbumPick = Keyboard.nextInt();
+                    InputCheck(0,DiscographyLength,Keyboard,AlbumPick);
+                    if (AlbumPick == 0)// The user picked to search in the entire discography
                     {
                         System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
-                        int choice = Keyboard.nextInt();
-                        if(choice == 1)
+                        int FileChoice = Keyboard.nextInt();
+                        if(FileChoice == 1)
                         {
-                            MakeSummaryFileDiscography(song.Word,file);
+                            MakeSummaryFileDiscography(word,array);
                             System.out.println("*****Summary file has been created successfully !*****");
                         }
-                        else if(choice == 0)
+                        else if(FileChoice == 0)
                         {
-                            counter = WordCounterInDiscography(song.Word,file);
-                            System.out.println("The word \""+song.Word+"\" appears "+counter+" times in Taylor's discography.");
+                            counter = WordCounterInDiscography(word,array);
+                            System.out.println("The word \""+word+"\" appears "+counter+" times in Taylor's discography.");
                         }
 
                     }
                     else// The user picked a specific album
                     {
                         int i;
-                        int choice = 0;
-                        for (i = 1; i <= pick; i++)
-                            temp = FileReader.nextLine();
-
-                        File AlbumFile = new File(temp);
-                        Album album = new Album();
-                        album.file = AlbumFile;
+                        int FileChoice = 0;
 
                         System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
                         System.out.print("----->");
-                        choice = Keyboard.nextInt();
-                        while((choice != 0 )&& (choice != 1))//Input check
+                        FileChoice = Keyboard.nextInt();
+                        InputCheck(0,1,Keyboard,FileChoice);
+                        if(FileChoice == 1)//If the user wants to create a file
                         {
-                            System.out.println("Invalid input, Please try again.");
-                            System.out.print("----->");
-                            choice = Keyboard.nextInt();
-                        }
-
-                        album = Album.GetAlbumDetails(album.file,i-1);
-                        if(choice == 1)//If the user wants to create a file
-                        {
-                            MakeSummaryFileAlbum(song.Word,album);
+                            MakeSummaryFileAlbum(word,array[AlbumPick]);
                             System.out.println("*** Summary file has been created ! ***");
                         }
                         else //if the user doesn't want to create a file
                         {
-                            Scanner AlbumReader = new Scanner(AlbumFile);
-
-                            System.out.println("In which song would you like to search ? pick 1-" + album.NumOfSongs + " or 0 for the entire album :");
-                            Printers.PrintAlbumsTracks(pick);
+                            System.out.println("In which song would you like to search ? pick 1-" + array[AlbumPick].NumOfSongs + " or 0 for the entire album :");
+                            Printers.PrintAlbumsTracks(AlbumPick);
                             System.out.print("----->");
-                            pick = Keyboard.nextInt();
-                            while ((pick < 0) || (pick > album.NumOfSongs))//Inout check
+                            int SongChoice = Keyboard.nextInt();
+                            InputCheck(0,array[AlbumPick].NumOfSongs,Keyboard,SongChoice);
+                            if (SongChoice > 0) //The user picked a specific song
                             {
-                                System.out.println("Invalid input, Please try again.");
-                                System.out.print("----->");
-                                pick = Keyboard.nextInt();
-                            }
-                            if (pick > 0) //The user picked a specific song
-                            {
-                                for (i = 1; i <= pick; i++)
-                                    temp = AlbumReader.nextLine();
+                                counter = WordCounterInSong(array[AlbumPick].SongsArray[SongChoice],word);
+                                System.out.println("The word \"" + word + "\" appears " + counter + " times in the song " + array[AlbumPick].SongsArray[SongChoice].SongName + ".");
 
-                                song.Path = temp;
-                                File SongFile = new File(song.Path);
-                                counter = WordCounterInSong(song);
-                                System.out.println("The word \"" + song.Word + "\" appears " + counter + " times in the song " + song.SongName + ".");
-
-                            } else if (pick == 0) //The user chose to search in the entire album
+                            } else if (SongChoice == 0) //The user chose to search in the entire album
                             {
-                                int AlbumCounter = WordCounterInAlbum(song.Word, album);
-                                System.out.println("The word \"" + song.Word + "\" appears " + AlbumCounter + " times in the " + album.AlbumName + " album.");
+                                int AlbumCounter = WordCounterInAlbum(word,array[AlbumPick]);
+                                System.out.println("The word \"" +word + "\" appears " + AlbumCounter + " times in the " + array[AlbumPick].AlbumName + " album.");
 
                             }
-                            AlbumReader.close();
                         }
                     }
                     Keyboard.nextLine();
                     FileReader.close();
                 }
-                else if(pick == 0)// The user chose to get a random taylor song
+                else if(MainPick == 0)// The user chose to get a random taylor song
                 {
                     Song RandSong = RandomSongArray(array);
                     System.out.println("The chosen song is " + RandSong.SongName + " !");
                 }
-                else if(pick == 2)
+                else if(MainPick == 2)
                 {
                     System.out.println("Please choose an album or press 0 for the entire discography :");
                     Printers.PrintAlbums();
                     System.out.println("----->");
                     int choice = Keyboard.nextInt();
-                    while((choice > DiscographyLength)||(choice < 0))//Input check
-                    {
-                        System.out.println("Invalid input, Please try again.");
-                        System.out.print("----->");
-                        choice = Keyboard.nextInt();
-                    }
+                    InputCheck(0,DiscographyLength,Keyboard,choice);
                     if(choice == 0)//The user chooses Duration information for the entire discography
                     {
                         DurationSummaryDiscography(array);
@@ -173,13 +131,7 @@ public class Main
                         System.out.println("Please choose a song or press 0 for the entire album :");
                         Printers.PrintAlbumsTracks(choice);
                         int input = Keyboard.nextInt();
-                        while ((input < 0) || (input > array[choice].NumOfSongs))//Inout check
-                        {
-                            System.out.println("Invalid input, Please try again.");
-                            System.out.print("----->");
-                            input = Keyboard.nextInt();
-                        }
-
+                        InputCheck(0,array[choice].NumOfSongs,Keyboard,input);
                         if(input == 0)//The user wants information about the whole album
                         {
                             Album.LongestAndShortestSongsInAlbum(array[choice]);
@@ -193,9 +145,8 @@ public class Main
                 }
                 System.out.println("Would you like to go again ? choose any number to continue or 0 to exit ");
                 System.out.print("----->");
-                again = Keyboard.nextInt();
+                IfRunAgain = Keyboard.nextInt();
             }
-
         } catch (FileNotFoundException e)
         {
             System.out.println("An error occurred.");
@@ -206,6 +157,17 @@ public class Main
 
     }
 
+
+    public static void InputCheck(int MinAllowed,int MaxAllowed,Scanner Keyboard,int input)
+    {
+        while(!((input >= MinAllowed)&&(input <= MaxAllowed)))
+        {
+            System.out.println("Invalid input, Please try again.");
+            System.out.print("----->");
+            input = Keyboard.nextInt();
+        }
+
+    }
 
     public static void DurationSummaryDiscography(Album[] array)
     {
@@ -284,35 +246,35 @@ public class Main
 
         }else if(choice == 0)
         {
-            int TotalCounter = 0;
-            Song TotalMaxSong = array[1].SongsArray[1];
-            Song TotalMinSong = array[1].SongsArray[1];
+            int TotalCounter = 0;//counts the duration (seconds) of the entire discography
+            Song TotalMaxSong = array[1].SongsArray[1];//holds the longest song on Taylor's discography
+            Song TotalMinSong = array[1].SongsArray[1];//holds the shortest song on Taylor's discography
 
             for(int i = 1 ; i <= DiscographyLength ; i++)
             {
-                int AlbumCounter = 0;
-                Song[] AlbumArray = array[i].SongsArray;
-                Song MaxSong = AlbumArray[1];
-                Song MinSong = AlbumArray[1];
+                int AlbumCounter = 0;//counts the duration (seconds) of the i-th album.
+                Song[] AlbumArray = array[i].SongsArray;//the array of songs of the i-th album
+                Song MaxSong = AlbumArray[1];//will hold the longest song on the album
+                Song MinSong = AlbumArray[1];//will hold the shortest song on the album
                 for(int j = 1 ; j <= array[i].NumOfSongs ; j++)
                 {
                     int Counter = AlbumArray[j].DurationInSec;
-                    if(AlbumArray[j].DurationInSec >= MaxSong.DurationInSec)
+                    if(AlbumArray[j].DurationInSec >= MaxSong.DurationInSec)//if the current song in longer than the album MaxSong
                     {
                         MaxSong = AlbumArray[j];
                     }
-                    else if(AlbumArray[j].DurationInSec < MinSong.DurationInSec)
+                    else if(AlbumArray[j].DurationInSec < MinSong.DurationInSec)//if the current song in shorter than the album MinSong
                     {
                         MinSong = AlbumArray[j];
                     }
                     AlbumCounter += Counter;
                 }
                 TotalCounter += AlbumCounter;
-                if(MaxSong.DurationInSec >= TotalMaxSong.DurationInSec)
+                if(MaxSong.DurationInSec >= TotalMaxSong.DurationInSec)//if the MaxSong on the album is longer than the TotalMaxSong
                 {
                     TotalMaxSong = MaxSong;
                 }
-                else if(MinSong.DurationInSec < TotalMinSong.DurationInSec)
+                else if(MinSong.DurationInSec < TotalMinSong.DurationInSec)//if the MinSong on the album is shorter than the TotalMinSong
                 {
                     TotalMinSong = MinSong;
                 }
@@ -333,47 +295,13 @@ public class Main
         return array[album].SongsArray[song];
     }
 
-    public static void RandomSong(File file) {
-        try (Scanner FileReader = new Scanner(file))
-        {
-            int RandAlbum, RandSong;
-            String temp;
-            Random rand = new Random();
-            RandAlbum = rand.nextInt(1, DiscographyLength + 1);
-            temp = FileReader.nextLine();
-            int i;
-            for (i = 1; i <= RandAlbum; i++)
-                temp = FileReader.nextLine();
-
-            File RandAlbumFile = new File(temp);
-            Scanner RandAlbumReader = new Scanner(RandAlbumFile);
-            Album album = Album.GetAlbumDetails(RandAlbumFile, i);
-            RandSong = rand.nextInt(1, album.NumOfSongs + 1);
-            for (i = 1; i <= RandSong; i++)
-                temp = RandAlbumReader.nextLine();
-
-            File RandSongFile = new File(temp);
-            Scanner SongReader = new Scanner(RandSongFile);
-            temp = SongReader.nextLine();
-            System.out.println("The chosen song is " + temp + " !");
-            RandAlbumReader.close();
-            SongReader.close();
-        }catch (FileNotFoundException e)
-        {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-
-
-    }
-    public static int WordCounterInSong(Song song)// This method counts the number of times a word appears in a given song
+    public static int WordCounterInSong(Song song,String word)// This method counts the number of times a word appears in a given song
     {//NEEDED THE SONG PATH AND THE WORD
 
         int WordCounter = 0;
         String temp;
 
         File file = new File(song.Path);
-
 
         try(Scanner myReader = new Scanner(file))
         {
@@ -392,11 +320,11 @@ public class Main
                 if(!temp.matches("[a-zA-Z0-9]+"))
                     temp = temp.replaceAll("[^a-zA-Z0-9]","");
 
-                if(temp.compareToIgnoreCase(song.Word) == 0)
+                if(temp.compareToIgnoreCase(word) == 0)
                     WordCounter++;
             }
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred.//");
             e.printStackTrace();
         }
 
@@ -407,51 +335,25 @@ public class Main
     public static int WordCounterInAlbum(String word,Album album)// This method counts the number of times a word appears in a given album
     {
         int AlbumCounter = 0;
+        Song[] array = album.SongsArray;
 
-        try (Scanner reader = new Scanner(album.file)) {
-            String temp = new String();
-            temp = reader.nextLine();
-
-            for (int i = 1; i <= album.NumOfSongs; i++) {
-
-                int counter = 0;
-                temp = reader.nextLine();
-                Song CurrSong = new Song();
-                CurrSong.Word = word;
-                CurrSong.Path = temp;
-                counter = WordCounterInSong(CurrSong);
-                AlbumCounter += counter;
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+        for (int i = 1; i <= album.NumOfSongs; i++)
+        {
+            int counter = WordCounterInSong(array[i],word);
+            AlbumCounter += counter;
         }
 
         return AlbumCounter;
     }
 
-    public static int WordCounterInDiscography(String word,File file)//This method counts the number of times a word appears in Taylor's entire discography
+    public static int WordCounterInDiscography(String word,Album[] array)//This method counts the number of times a word appears in Taylor's entire discography
     {
         int TotalCounter = 0;
-        String temp;
-        try(Scanner reader = new Scanner(file))
+        for(int i = 1; i <= DiscographyLength ; i++)
         {
-            temp = reader.nextLine();
-            for(int i = 1; i <= DiscographyLength ; i++)
-            {
-                int counter = 0;
-                temp = reader.nextLine();
-                File AlbumFile = new File(temp);
-                Album album = Album.GetAlbumDetails(AlbumFile,i);
-                counter = WordCounterInAlbum(word,album);
-                //System.out.println("album name : " +album.AlbumName +"it appears : "+ counter +" times ");
-                TotalCounter += counter;
-
-            }
-        }
-        catch(FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            int counter = 0;
+            counter = WordCounterInAlbum(word,array[i]);
+            TotalCounter += counter;
         }
 
         return TotalCounter;
@@ -463,18 +365,12 @@ public class Main
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(NewFileName)))
         {
             writer.write("Summary file for the word "+word+" in the "+album.AlbumName+" album.\n");
-            Scanner AlbumReader = new Scanner(album.file);
-            String temp = AlbumReader.nextLine();
             int AlbumCounter = 0;
             for(int i = 1; i <= album.NumOfSongs ; i++)
             {
                 int counter = 0;
-                Song song = new Song();
-                temp = AlbumReader.nextLine();
-                song.Path = temp;
-                song.Word = word;
-                counter = WordCounterInSong(song);
-                writer.write(i+") \""+song.SongName+"\" : "+counter+ " times\n");
+                counter = WordCounterInSong(album.SongsArray[i],word);
+                writer.write(i+") \""+album.SongsArray[i].SongName+"\" : "+counter+ " times\n");
                 AlbumCounter += counter;
             }
             writer.write("*** In Total, the word \""+word+"\" appears "+AlbumCounter+" times in the album \""+album.AlbumName+"\".");
@@ -485,42 +381,29 @@ public class Main
 
     }
 
-    public static void MakeSummaryFileDiscography(String word,File MainFile)
+    public static void MakeSummaryFileDiscography(String word,Album[] array)
     {
         String FileName = word + " - Full Summary.txt";
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
         {
             writer.write("Summary file for the word \""+word+"\".\n");
-            Scanner MainFileScanner = new Scanner(MainFile);
-            String temp = MainFileScanner.nextLine();
             int TotalCounter = 0;
             for(int i = 1; i <= DiscographyLength ; i++)
             {
-                temp = MainFileScanner.nextLine();
-                File AlbumFile = new File(temp);
-                Scanner AlbumFileScanner = new Scanner(AlbumFile);
-                Album albumObj = new Album();
-                albumObj = Album.GetAlbumDetails(AlbumFile,i);
-                writer.write("Album name : "+albumObj.AlbumName+"\n");
+                Song[] AlbumArray = array[i].SongsArray;
+                writer.write("Album name : "+array[i].AlbumName+"\n");
                 int AlbumCounter = 0;
-                String Line = AlbumFileScanner.nextLine();
-                for(int j = 1; j <= albumObj.NumOfSongs ; j++)
+                for(int j = 1; j <= array[i].NumOfSongs ; j++)
                 {
                     int counter = 0;
-                    Song song = new Song();
-                    Line = AlbumFileScanner.nextLine();
-                    song.Word = word;
-                    song.Path = Line;
-                    counter = WordCounterInSong(song);
-                    writer.write(j+") "+song.SongName+" : "+counter+ " times\n");
+                    counter = WordCounterInSong(array[i].SongsArray[j],word);
+                    writer.write(j+") "+array[i].SongsArray[j].SongName+" : "+counter+ " times\n");
                     AlbumCounter += counter;
                 }
-                writer.write("In total, The word appears "+AlbumCounter+" times in the "+albumObj.AlbumName+" album.\n\n");
+                writer.write("In total, The word appears "+AlbumCounter+" times in the "+array[i].AlbumName+" album.\n\n");
                 TotalCounter += AlbumCounter;
-                AlbumFileScanner.close();
             }
             writer.write("***** In Total, The word appears "+TotalCounter +" times in Tyalor's Entire Discography *****");
-            MainFileScanner.close();
         }
         catch (IOException e) {
             System.err.println("Error writing to the file: " + e.getMessage());

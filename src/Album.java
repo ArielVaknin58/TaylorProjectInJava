@@ -17,7 +17,6 @@ public class Album {
         this.AlbumName = name;
         this.NumOfSongs = Length;
         this.AlbumNumber = num;
-        //this.Duration = duration;
         this.file = file;
         this.SongsArray = songsArray;
     }
@@ -27,7 +26,6 @@ public class Album {
         this.AlbumName = "";
         this.NumOfSongs = 0;
         this.AlbumNumber = 0;
-        //this.Duration = 0;
         this.file = null;
         this.SongsArray = null;
     }
@@ -181,6 +179,7 @@ public class Album {
                 temp = AlbumReader.nextLine();
                 File SongFile = new File(temp);
                 song = song.GetSongInformation(SongFile);
+                song.Path = temp;
                 AlbumArray[i] = song;
             }
         }

@@ -1,0 +1,94 @@
+
+
+
+   public static int WordCounterInAlbum(String word,Album album)// This method counts the number of times a word appears in a given album
+    {
+    int AlbumCounter = 0;
+
+        try (Scanner reader = new Scanner(album.file)) {
+
+            String temp = new String();
+            temp = reader.nextLine();
+
+            for (int i = 1; i <= album.NumOfSongs; i++) {
+
+                int counter = 0;
+                temp = reader.nextLine();
+                Song CurrSong = new Song();
+                CurrSong.Word = word;
+                CurrSong.Path = temp;
+                counter = WordCounterInSong(CurrSong);
+                AlbumCounter += counter;
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+           // e.printStackTrace();
+        }
+
+        return AlbumCounter;
+    }
+
+
+
+
+
+    public static int WordCounterInDiscography(String word,File file)//This method counts the number of times a word appears in Taylor's entire discography
+    {
+        int TotalCounter = 0;
+        String temp;
+        try(Scanner reader = new Scanner(file))
+        {
+            temp = reader.nextLine();
+            for(int i = 1; i <= DiscographyLength ; i++)
+            {
+                int counter = 0;
+                temp = reader.nextLine();
+                File AlbumFile = new File(temp);
+                Album album = Album.GetAlbumDetails(AlbumFile,i);
+                counter = WordCounterInAlbum(word,album);
+                //System.out.println("album name : " +album.AlbumName +"it appears : "+ counter +" times ");
+                TotalCounter += counter;
+
+            }
+        }
+        catch(FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
+        return TotalCounter;
+    }
+
+    public static void RandomSong(File file) {
+            try (Scanner FileReader = new Scanner(file))
+            {
+                int RandAlbum, RandSong;
+                String temp;
+                Random rand = new Random();
+                RandAlbum = rand.nextInt(1, DiscographyLength + 1);
+                temp = FileReader.nextLine();
+                int i;
+                for (i = 1; i <= RandAlbum; i++)
+                    temp = FileReader.nextLine();
+
+                File RandAlbumFile = new File(temp);
+                Scanner RandAlbumReader = new Scanner(RandAlbumFile);
+                Album album = Album.GetAlbumDetails(RandAlbumFile, i);
+                RandSong = rand.nextInt(1, album.NumOfSongs + 1);
+                for (i = 1; i <= RandSong; i++)
+                    temp = RandAlbumReader.nextLine();
+
+                File RandSongFile = new File(temp);
+                Scanner SongReader = new Scanner(RandSongFile);
+                temp = SongReader.nextLine();
+                System.out.println("The chosen song is " + temp + " !");
+                RandAlbumReader.close();
+                SongReader.close();
+            }catch (FileNotFoundException e)
+            {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+
+
+        }

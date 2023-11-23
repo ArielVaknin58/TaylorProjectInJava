@@ -6,7 +6,6 @@ import java.lang.Integer; // used for the ParseInt method
 public class Song {
     public String SongName;//Holds a string containing the name of the song.
     public String Path;//Holds the path to the song,to be given in order to open the file in other methods.
-    public String Word;//Contains the word the program searches for.
     int counter;//Holds the number of appearances of the given word in the song
 
     int DurationInSec;//Holds the duration of the song in seconds.
@@ -15,8 +14,7 @@ public class Song {
     public Song()
     {
         this.SongName = "";
-        this.Path = "";
-        this.Word = "";
+        this.Path = "bloop";
         this.counter = 0;
         this.DurationInSec = 0;
     }
