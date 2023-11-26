@@ -47,7 +47,6 @@ public class DurationAndLyrics {
 
         } catch (IOException e) {
             System.err.println("Error reading lyrics from file: " + e.getMessage());
-            // Handle the error appropriately in your application
         }
         return DAL;
     }
@@ -111,4 +110,5 @@ public class DurationAndLyrics {
 
         return res;
     }
+
 }

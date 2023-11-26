@@ -1,0 +1,273 @@
+Summary of the number of words in Taylor's Discography
+
+Album Name : Debut
+1) "Tim McGraw" : 366 words
+2) "Picture to Burn" : 291 words
+3) "Teardrops On My Guitar" : 288 words
+4) "A Place In This World" : 232 words
+5) "Cold as You" : 247 words
+6) "The Outside" : 234 words
+7) "Tied Together with a Smile" : 254 words
+8) "Stay Beautiful" : 261 words
+9) "Should’ve Said No" : 352 words
+10) "Mary’s Song (Oh My My My)" : 331 words
+11) "Our Song" : 371 words
+12) "I’m Only Me When I’m With You" : 304 words
+13) "Invisible" : 250 words
+14) "A Perfectly Good Heart" : 232 words
+In summary, in the Debut album there are 4013 words.
+The longest song on the album is "Our Song" with 371 words
+The shortest song on the album is "A Perfectly Good Heart" with 232 words.
+
+Album Name : Fearless
+1) "Fearless" : 316 words
+2) "Fifteen" : 385 words
+3) "Love Story" : 378 words
+4) "Hey Stephen" : 408 words
+5) "White Horse" : 304 words
+6) "You Belong With Me" : 396 words
+7) "Breathe" : 364 words
+8) "Tell Me Why" : 348 words
+9) "You’re Not Sorry" : 312 words
+10) "The Way I Loved You" : 339 words
+11) "Forever & Always" : 405 words
+12) "The Best Day" : 348 words
+13) "Change" : 270 words
+14) "Jump Then Fall" : 382 words
+15) "Untouchable" : 408 words
+16) "Come In With The Rain" : 229 words
+17) "Superstar" : 270 words
+18) "The Other Side of the Door" : 373 words
+19) "Today Was a Fairytale" : 344 words
+20) "You All Over Me ft. Maren Morris" : 324 words
+21) "Mr. Perfectly Fine" : 412 words
+22) "We Were Happy" : 248 words
+23) "That’s When ft. Keith Urban" : 342 words
+24) "Don’t You" : 242 words
+25) "Bye Bye Baby" : 343 words
+In summary, in the Fearless album there are 8490 words.
+The longest song in the album is "Mr. Perfectly Fine" with 412 words
+The shortest song on the album is "Come In With The Rain" with 229 words.
+
+Album Name : Speak Now
+1) "Mine" : 401 words
+2) "Sparks Fly" : 349 words
+3) "Back To December" : 424 words
+4) "Speak Now" : 432 words
+5) "Dear John" : 376 words
+6) "Mean" : 405 words
+7) "The Story Of Us" : 451 words
+8) "Never Grow Up" : 444 words
+9) "Enchanted" : 389 words
+10) "Better Than Revenge" : 532 words
+11) "Innocent" : 317 words
+12) "Haunted" : 322 words
+13) "Last Kiss" : 406 words
+14) "Long Live" : 441 words
+15) "Ours" : 297 words
+16) "Superman" : 377 words
+17) "Electric Touch ft. Fall Out Boy" : 359 words
+18) "When Emma Falls in Love" : 382 words
+19) "I Can See You" : 410 words
+20) "Castles Crumbling ft. Hayley Williams" : 353 words
+21) "Foolish One" : 461 words
+22) "Timeless" : 525 words
+In summary, in the Speak Now album there are 8853 words.
+The longest song in the album is "Better Than Revenge" with 532 words
+The shortest song on the album is "Ours" with 297 words.
+
+Album Name : Red
+1) "State of Grace" : 268 words
+2) "Red" : 325 words
+3) "Treacherous" : 260 words
+4) "I Knew You Were Trouble" : 402 words
+5) "All Too Well" : 465 words
+6) "22" : 407 words
+7) "I Almost Do" : 276 words
+8) "We Are Never Ever Getting Back Together" : 378 words
+9) "Stay Stay Stay" : 330 words
+10) "The Last Time" : 450 words
+11) "Holy Ground" : 280 words
+12) "Sad Beautiful Tragic" : 188 words
+13) "The Lucky One" : 338 words
+14) "Everything Has Changed ft. Ed Sheeran" : 478 words
+15) "Starlight" : 340 words
+16) "Begin Again" : 336 words
+17) "The Moment I Knew" : 342 words
+18) "Come Back...Be Here" : 323 words
+19) "Girl At Home" : 395 words
+20) "Ronan" : 307 words
+21) "Better Man" : 488 words
+22) "Nothing New ft. Phoebe Bridgers" : 387 words
+23) "Babe" : 373 words
+24) "Message In A Bottle" : 396 words
+25) "I Bet You Think About Me ft. Chris Stapleton" : 476 words
+26) "Forever Winter" : 354 words
+27) "Run ft. Ed Sheeran" : 394 words
+28) "The Very First Night" : 401 words
+29) "All Too Well (10 Minute Version)" : 968 words
+In summary, in the Red album there are 11125 words.
+The longest song in the album is "All Too Well (10 Minute Version)" with 968 words
+The shortest song on the album is "Sad Beautiful Tragic" with 188 words.
+
+Album Name : 1989
+1) "Welcome to New York" : 347 words
+2) "Blank Space" : 519 words
+3) "Style" : 394 words
+4) "Out Of The Woods" : 667 words
+5) "All You Had To Do Was Stay" : 466 words
+6) "Shake It Off" : 557 words
+7) "I Wish You Would" : 592 words
+8) "Bad Blood (Remix) ft. Kendrick Lamar" : 535 words
+9) "Wildest Dreams" : 356 words
+10) "How You Get The Girl" : 408 words
+11) "This Love" : 385 words
+12) "I Know Places" : 338 words
+13) "Clean" : 335 words
+14) "Wonderland" : 473 words
+15) "You Are in Love" : 415 words
+16) "New Romantics" : 504 words
+17) "Slut!" : 338 words
+18) "Say Don’t Go" : 442 words
+19) "Now That We Don’t Talk" : 282 words
+20) "Suburban Legends" : 305 words
+21) "Is It Over Now?" : 401 words
+In summary, in the 1989 album there are 9059 words.
+The longest song in the album is "Out Of The Woods" with 667 words
+The shortest song on the album is "Now That We Don’t Talk" with 282 words.
+
+Album Name : Reputation
+1) "...Ready For it?" : 446 words
+2) "End Game ft. Ed Sheeran and Future" : 737 words
+3) "I Did Something Bad" : 478 words
+4) "Don’t Blame Me" : 485 words
+5) "Delicate" : 489 words
+6) "Look What You Made Me Do" : 557 words
+7) "So It Goes..." : 387 words
+8) "Gorgeous" : 438 words
+9) "Getaway Car" : 550 words
+10) "King of My Heart" : 466 words
+11) "Dancing With Our Hands Tied" : 434 words
+12) "Dress" : 491 words
+13) "This Is Why We Can’t Have Nice Things" : 399 words
+14) "Call It What You Want" : 520 words
+15) "New Year’s Day" : 369 words
+In summary, in the Reputation album there are 7246 words.
+The longest song in the album is "End Game ft. Ed Sheeran and Future" with 737 words
+The shortest song on the album is "New Year’s Day" with 369 words.
+
+Album Name : Lover
+1) "I Forgot That You Existed" : 293 words
+2) "Cruel Summer" : 441 words
+3) "Lover" : 258 words
+4) "The Man" : 430 words
+5) "The Archer" : 292 words
+6) "I Think He Knows" : 394 words
+7) "Miss Americana & The Heartbreak Prince" : 513 words
+8) "Paper Rings" : 483 words
+9) "Cornelia Street" : 386 words
+10) "Death By A Thousand Cuts" : 430 words
+11) "London Boy" : 443 words
+12) "Soon You’ll Get Better" : 256 words
+13) "False God" : 321 words
+14) "You Need To Calm Down" : 344 words
+15) "Afterglow" : 385 words
+16) "ME! ft. Brendon Urie" : 488 words
+17) "It’s Nice To Have A Friend" : 156 words
+18) "Daylight" : 482 words
+19) "All Of The Girls You Loved Before" : 321 words
+In summary, in the Lover album there are 7116 words.
+The longest song in the album is "Miss Americana & The Heartbreak Prince" with 513 words
+The shortest song on the album is "It’s Nice To Have A Friend" with 156 words.
+
+Album Name : Folklore
+1) "the 1" : 307 words
+2) "cardigan" : 336 words
+3) "the last great american dynasty" : 329 words
+4) "exile" : 480 words
+5) "​my tears ricochet" : 310 words
+6) "mirrorball" : 258 words
+7) "seven" : 218 words
+8) "august" : 397 words
+9) "​this is me trying" : 260 words
+10) "​illicit affairs" : 239 words
+11) "​invisible string" : 298 words
+12) "​mad woman" : 314 words
+13) "epiphany" : 183 words
+14) "betty" : 455 words
+15) "peace" : 287 words
+16) "hoax" : 242 words
+17) "​the lakes" : 232 words
+In summary, in the Folklore album there are 5145 words.
+The longest song in the album is "exile" with 480 words
+The shortest song on the album is "epiphany" with 183 words.
+
+Album Name : Evermore
+1) "willow" : 408 words
+2) "​champagne problems" : 286 words
+3) "gold rush" : 339 words
+4) "​’tis the damn season" : 408 words
+5) "​tolerate it" : 314 words
+6) "​no body, no crime ft. HAIM" : 397 words
+7) "​happiness" : 431 words
+8) "​dorothea" : 244 words
+9) "​coney island" : 424 words
+10) "ivy" : 368 words
+11) "​cowboy like me" : 342 words
+12) "​l​ong story short" : 406 words
+13) "marjorie" : 320 words
+14) "​closure" : 230 words
+15) "evermore" : 362 words
+16) "​r​ight where you left me" : 407 words
+17) "​it’s time to go" : 377 words
+In summary, in the Evermore album there are 6063 words.
+The longest song in the album is "​happiness" with 431 words
+The shortest song on the album is "​closure" with 230 words.
+
+Album Name : Midnights
+1) "Lavender Haze" : 301 words
+2) "Maroon" : 350 words
+3) "Anti-Hero" : 333 words
+4) "Snow On The Beach ft. Lana Del Ray" : 451 words
+5) "You’re On Your Own, Kid" : 297 words
+6) "Midnight Rain" : 283 words
+7) "Question...?" : 432 words
+8) "Vigilante Shit" : 259 words
+9) "Bejeweled" : 426 words
+10) "Labyrinth" : 277 words
+11) "Karma" : 383 words
+12) "Sweet Nothing" : 269 words
+13) "Mastermind" : 336 words
+14) "The Great War" : 346 words
+15) "Bigger Than The Whole Sky" : 249 words
+16) "Paris" : 310 words
+17) "High Infidelity" : 375 words
+18) "Glitch" : 233 words
+19) "Would’ve, Could’ve, Should’ve" : 500 words
+20) "Dear Reader" : 266 words
+21) "Hits Different" : 458 words
+22) "You’re Losing Me" : 396 words
+In summary, in the Midnights album there are 7530 words.
+The longest song in the album is "Would’ve, Could’ve, Should’ve" with 500 words
+The shortest song on the album is "Glitch" with 233 words.
+
+Album Name : Specials
+1) "Safe & Sound ft. The Civil Wars" : 209 words
+2) "Eyes Open" : 255 words
+3) "Crazier" : 218 words
+4) "I Don’t Wanna Live Forever" : 418 words
+5) "Carolina" : 233 words
+6) "Renegade" : 485 words
+7) "Christmas Tree Farm" : 304 words
+8) "Beautiful Ghosts" : 294 words
+9) "Only The Young" : 297 words
+10) "The Joker And The Queen" : 214 words
+11) "Sweeter Than Fiction" : 473 words
+In summary, in the Specials album there are 3400 words.
+The longest song in the album is "Renegade" with 485 words
+The shortest song on the album is "The Joker And The Queen" with 214 words.
+
+***In summary, there are 78040 words in Taylor's entire discography.
+The longest song in Taylor's discography is "All Too Well (10 Minute Version)" with 968 words
+The shortest song on the album is "It’s Nice To Have A Friend" with 156 words.
+

@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Scanner;// Used to read from the user or files
 import java.lang.Integer; // used for the ParseInt method
 import java.util.Random;// Used to generate a random song
-import java.util.HashMap;
+//import java.util.HashMap;
 
 
 
@@ -11,9 +11,8 @@ import java.util.HashMap;
 2)
 3) Implement a GUI
 4)
-5) Add average song and implement the word counter.
+5)
 6) Add more function to do with duration (album length,avg song length in album/discography etc.)
-//*** word counter, what song is the longest word-wise and seconds wise.
 
  */
 
@@ -36,9 +35,9 @@ public class Main
 
             while(IfRunAgain != 0) // Main loop. repeats until its requested to exit
             {
-                int counter = 0;
-                int MainPick = 0;
-                System.out.println("Hello ! Pick one of the options :\n0 to get a random Taylor song\n1 to look up a word \n2 to get Songs/Albums length information :");
+                int counter;
+                int MainPick;
+                System.out.println("Hello ! Pick one of the options :\n0 to get a random Taylor song\n1 to look up a word \n2 to get Songs/Albums length information \n3 to get information about amount of words :");
                 System.out.print("----->");
                 MainPick = Keyboard.nextInt();
                 InputCheck(0,3,Keyboard,MainPick);
@@ -75,8 +74,7 @@ public class Main
                     }
                     else// The user picked a specific album
                     {
-                        int i;
-                        int FileChoice = 0;
+                        int FileChoice;
 
                         System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
                         System.out.print("----->");
@@ -115,39 +113,90 @@ public class Main
                     Song RandSong = RandomSongArray(array);
                     System.out.println("The chosen song is " + RandSong.SongName + " !");
                 }
-                else if(MainPick == 2)
+                else if(MainPick == 2)// The user chose to get information about the duration of songs/albums.
                 {
+                    System.out.println("Would you like to get duration info (1) or song average info (2)? ");
+                    System.out.println("----->");
+                    int SubPick = Keyboard.nextInt();
+                    InputCheck(1,2,Keyboard,SubPick);
+                    if(SubPick == 1)//The user chooses to get duration information
+                    {
+                        System.out.println("Please choose an album or press 0 for the entire discography :");
+                        Printers.PrintAlbums();
+                        System.out.println("----->");
+                        int choice = Keyboard.nextInt();
+                        InputCheck(0,DiscographyLength,Keyboard,choice);
+                        if(choice == 0)//The user chooses Duration information for the entire discography
+                            DurationSummaryDiscography(array);
+
+                        else//The user chooses to get information about a specific album
+                        {
+                            System.out.println("Please choose a song or press 0 for the entire album :");
+                            Printers.PrintAlbumsTracks(choice);
+                            int input = Keyboard.nextInt();
+                            InputCheck(0,array[choice].NumOfSongs,Keyboard,input);
+                            if(input == 0)//The user wants information about the whole album
+                                Album.LongestAndShortestSongsInAlbum(array[choice]);
+
+                            else//The user wants a specific song
+                            {
+                                Song ChosenSong = array[choice].SongsArray[input];
+                                System.out.println("The duration of the song "+ChosenSong.SongName+" is "+Song.GetSongHours(ChosenSong)+"h and "+Song.GetSongSeconds(ChosenSong)+"s.");
+                            }
+                        }
+                    }
+                    else if(SubPick == 2)//The user chooses to get song average information
+                    {
+                        System.out.println("Please choose an album or press 0 for the entire discography :");
+                        Printers.PrintAlbums();
+                        System.out.println("----->");
+                        int AlbumPick = Keyboard.nextInt();
+                        InputCheck(0,DiscographyLength,Keyboard,AlbumPick);
+                        if(AlbumPick == 0)//If the user chooses the entire discography
+                            Album.AvgSongLengthInDiscography(array);
+                        else//If the user chooses a specific album
+                        {
+                            int res = Album.AvgSongLengthInAlbum(array[AlbumPick]);
+                            System.out.println("The song average in the "+array[AlbumPick].AlbumName+" album is "+res/60+"m and "+res%60+"s .");
+                        }
+                    }
+
+                }
+                else if(MainPick == 3)//The user chooses to get information about the number of words
+                {
+                    //HashMap<String,HashMap<String,DurationAndLyrics>> FullHash = DurationAndLyrics.CreateDiscographyHash(args[0]);
+                    // System.out.println(FullHash);
+                    // System.out.println(FullHash.get(array[3].AlbumName));
                     System.out.println("Please choose an album or press 0 for the entire discography :");
                     Printers.PrintAlbums();
                     System.out.println("----->");
-                    int choice = Keyboard.nextInt();
-                    InputCheck(0,DiscographyLength,Keyboard,choice);
-                    if(choice == 0)//The user chooses Duration information for the entire discography
-                    {
-                        DurationSummaryDiscography(array);
-                    }
-                    else//The user chooses to get information about a specific album
+                    int AlbumPick = Keyboard.nextInt();
+                    InputCheck(0,DiscographyLength,Keyboard,AlbumPick);
+                    if(AlbumPick == 0)//If the user chooses the entire discography
+                        Album.NumOfWordsInDiscography(array);
+                    else//If the user chooses a specific album
                     {
                         System.out.println("Please choose a song or press 0 for the entire album :");
-                        Printers.PrintAlbumsTracks(choice);
-                        int input = Keyboard.nextInt();
-                        InputCheck(0,array[choice].NumOfSongs,Keyboard,input);
-                        if(input == 0)//The user wants information about the whole album
+                        Printers.PrintAlbumsTracks(AlbumPick);
+                        System.out.println("----->");
+                        int SongPick = Keyboard.nextInt();
+                        InputCheck(0,array[AlbumPick].NumOfSongs,Keyboard,SongPick);
+                        if(SongPick == 0)//The user chooses to get information about the whole album
                         {
-                            Album.LongestAndShortestSongsInAlbum(array[choice]);
+                            System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
+                            System.out.println("----->");
+                            int AlbumChoice = Keyboard.nextInt();
+                            InputCheck(0,1,Keyboard,AlbumChoice);
+                            if(AlbumChoice == 0)//The user doesn't want to create a summary file
+                                Album.NumOfWordsInAlbum(array[AlbumPick]);
+                            else if(AlbumChoice == 1)//The user chooses to create a summary file
+                                Album.NumOfWordsInAlbumSummary(array[AlbumPick]);
                         }
-                        else//The user wants a specific song
-                        {
-                            Song ChosenSong = array[choice].SongsArray[input];
-                            System.out.println("The duration of the song "+array[choice].SongsArray[input].SongName+" is "+Song.GetSongHours(array[choice].SongsArray[input])+"h and "+Song.GetSongSeconds(array[choice].SongsArray[input])+"s.");
-                        }
+                        else//The user chooses to get information about a specific song
+                            System.out.println("There are "+Song.NumOfWordsInASong(array[AlbumPick].SongsArray[SongPick])+" words in this song.");
                     }
                 }
-                else if(MainPick == 3)
-                {
-                    HashMap<String,HashMap<String,DurationAndLyrics>> FullHash = DurationAndLyrics.CreateDiscographyHash(args[0]);
-                    System.out.println(FullHash);
-                }
+
                 System.out.println("Would you like to go again ? choose any number to continue or 0 to exit ");
                 System.out.print("----->");
                 IfRunAgain = Keyboard.nextInt();
@@ -172,7 +221,6 @@ public class Main
             System.out.print("----->");
             input = Keyboard.nextInt();
         }
-
     }
 
     public static void DurationSummaryDiscography(Album[] array)
@@ -180,12 +228,11 @@ public class Main
         System.out.println("Would you like to create a summary file ? 1 for yes / 0 for no");
         Scanner Keyboard = new Scanner(System.in);
         int choice = Keyboard.nextInt();
-        while((choice != 0 )&& (choice != 1))//Input check
-        {
-            System.out.println("Invalid input, Please try again.");
-            System.out.print("----->");
-            choice = Keyboard.nextInt();
-        }
+        InputCheck(0,1, Keyboard,choice);
+
+        int TotalCounter = 0;//counts the duration (seconds) of the entire discography
+        Song TotalMaxSong = array[1].SongsArray[1];//holds the longest song on Taylor's discography
+        Song TotalMinSong = array[1].SongsArray[1];//holds the shortest song on Taylor's discography
 
         if(choice == 1)//The user chooses to create a summary file
         {
@@ -193,10 +240,6 @@ public class Main
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
             {
                 writer.write("Summary Duration for Taylor's discography in MM:SS format\n\n");
-                int TotalCounter = 0;
-                Song TotalMaxSong = array[1].SongsArray[1];
-                Song TotalMinSong = array[1].SongsArray[1];
-
                 for(int i = 1 ; i <= DiscographyLength ; i++)
                 {
                     int AlbumCounter = 0;
@@ -252,9 +295,6 @@ public class Main
 
         }else if(choice == 0)
         {
-            int TotalCounter = 0;//counts the duration (seconds) of the entire discography
-            Song TotalMaxSong = array[1].SongsArray[1];//holds the longest song on Taylor's discography
-            Song TotalMinSong = array[1].SongsArray[1];//holds the shortest song on Taylor's discography
 
             for(int i = 1 ; i <= DiscographyLength ; i++)
             {
@@ -357,7 +397,7 @@ public class Main
         int TotalCounter = 0;
         for(int i = 1; i <= DiscographyLength ; i++)
         {
-            int counter = 0;
+            int counter;
             counter = WordCounterInAlbum(word,array[i]);
             TotalCounter += counter;
         }
@@ -374,7 +414,7 @@ public class Main
             int AlbumCounter = 0;
             for(int i = 1; i <= album.NumOfSongs ; i++)
             {
-                int counter = 0;
+                int counter;
                 counter = WordCounterInSong(album.SongsArray[i],word);
                 writer.write(i+") \""+album.SongsArray[i].SongName+"\" : "+counter+ " times\n");
                 AlbumCounter += counter;
@@ -401,15 +441,14 @@ public class Main
                 int AlbumCounter = 0;
                 for(int j = 1; j <= array[i].NumOfSongs ; j++)
                 {
-                    int counter = 0;
-                    counter = WordCounterInSong(array[i].SongsArray[j],word);
-                    writer.write(j+") "+array[i].SongsArray[j].SongName+" : "+counter+ " times\n");
+                    int counter = WordCounterInSong(AlbumArray[j],word);
+                    writer.write(j+") "+AlbumArray[j].SongName+" : "+counter+ " times\n");
                     AlbumCounter += counter;
                 }
                 writer.write("In total, The word appears "+AlbumCounter+" times in the "+array[i].AlbumName+" album.\n\n");
                 TotalCounter += AlbumCounter;
             }
-            writer.write("***** In Total, The word appears "+TotalCounter +" times in Tyalor's Entire Discography *****");
+            writer.write("***** In Total, The word appears "+TotalCounter +" times in Taylor's Entire Discography *****");
         }
         catch (IOException e) {
             System.err.println("Error writing to the file: " + e.getMessage());
@@ -428,8 +467,7 @@ public class Main
                 temp = FileReader.nextLine();
                 File AlbumFile = new File(temp);
                 Album album = Album.GetAlbumDetails(AlbumFile,i);
-                Song[] AlbumArray = Album.CreateAlbumArray(album);
-                album.SongsArray = AlbumArray;
+                album.SongsArray = Album.CreateAlbumArray(album);
                 DiscographyArray[i] = album;
             }
         }catch (IOException e) {
