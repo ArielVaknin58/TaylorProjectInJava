@@ -1,0 +1,247 @@
+Summary file for Explicit songs in Taylor's discography.
+Album name : Fearless
+1) "Tim McGraw" - Clean
+2) "Picture to Burn" - Clean
+3) "Teardrops On My Guitar" - Clean
+4) "A Place In This World" - Clean
+5) "Cold as You" - Clean
+6) "The Outside" - Clean
+7) "Tied Together with a Smile" - Clean
+8) "Stay Beautiful" - Clean
+9) "Should’ve Said No" - Clean
+10) "Mary’s Song (Oh My My My)" - Clean
+11) "Our Song" - Clean
+12) "I’m Only Me When I’m With You" - Clean
+13) "Invisible" - Clean
+14) "A Perfectly Good Heart" - Clean
+In summary, there are 0 explicit songs in the Debut album.
+
+Album name : Speak Now
+1) "Fearless" - Clean
+2) "Fifteen" - Clean
+3) "Love Story" - Clean
+4) "Hey Stephen" - Clean
+5) "White Horse" - Clean
+6) "You Belong With Me" - Clean
+7) "Breathe" - Clean
+8) "Tell Me Why" - Clean
+9) "You’re Not Sorry" - Clean
+10) "The Way I Loved You" - Clean
+11) "Forever & Always" - Clean
+12) "The Best Day" - Clean
+13) "Change" - Clean
+14) "Jump Then Fall" - Clean
+15) "Untouchable" - Clean
+16) "Come In With The Rain" - Clean
+17) "Superstar" - Clean
+18) "The Other Side of the Door" - Clean
+19) "Today Was a Fairytale" - Clean
+20) "You All Over Me ft. Maren Morris" - Clean
+21) "Mr. Perfectly Fine" - Clean
+22) "We Were Happy" - Clean
+23) "That’s When ft. Keith Urban" - Clean
+24) "Don’t You" - Clean
+25) "Bye Bye Baby" - Clean
+In summary, there are 0 explicit songs in the Fearless album.
+
+Album name : Red
+1) "Mine" - Clean
+2) "Sparks Fly" - Clean
+3) "Back To December" - Clean
+4) "Speak Now" - Clean
+5) "Dear John" - Clean
+6) "Mean" - Clean
+7) "The Story Of Us" - Clean
+8) "Never Grow Up" - Clean
+9) "Enchanted" - Clean
+10) "Better Than Revenge" - Clean
+11) "Innocent" - Clean
+12) "Haunted" - Clean
+13) "Last Kiss" - Clean
+14) "Long Live" - Clean
+15) "Ours" - Clean
+16) "Superman" - Clean
+17) "Electric Touch ft. Fall Out Boy" - Clean
+18) "When Emma Falls in Love" - Clean
+19) "I Can See You" - Clean
+20) "Castles Crumbling ft. Hayley Williams" - Clean
+21) "Foolish One" - Clean
+22) "Timeless" - Clean
+In summary, there are 0 explicit songs in the Speak Now album.
+
+Album name : 1989
+1) "State of Grace" - Clean
+2) "Red" - Clean
+3) "Treacherous" - Clean
+4) "I Knew You Were Trouble" - Clean
+5) "All Too Well" - Clean
+6) "22" - Clean
+7) "I Almost Do" - Clean
+8) "We Are Never Ever Getting Back Together" - Clean
+9) "Stay Stay Stay" - Clean
+10) "The Last Time" - Clean
+11) "Holy Ground" - Clean
+12) "Sad Beautiful Tragic" - Clean
+13) "The Lucky One" - Clean
+14) "Everything Has Changed ft. Ed Sheeran" - Clean
+15) "Starlight" - Clean
+16) "Begin Again" - Clean
+17) "The Moment I Knew" - Clean
+18) "Come Back...Be Here" - Clean
+19) "Girl At Home" - Clean
+20) "Ronan" - Clean
+21) "Better Man" - Clean
+22) "Nothing New ft. Phoebe Bridgers" - Clean
+23) "Babe" - Clean
+24) "Message In A Bottle" - Clean
+25) "I Bet You Think About Me ft. Chris Stapleton" - Explicit
+26) "Forever Winter" - Clean
+27) "Run ft. Ed Sheeran" - Clean
+28) "The Very First Night" - Clean
+29) "All Too Well (10 Minute Version)" - Explicit
+In summary, there are 2 explicit songs in the Red album.
+
+Album name : Reputation
+1) "Welcome to New York" - Clean
+2) "Blank Space" - Clean
+3) "Style" - Clean
+4) "Out Of The Woods" - Clean
+5) "All You Had To Do Was Stay" - Clean
+6) "Shake It Off" - Clean
+7) "I Wish You Would" - Clean
+8) "Bad Blood (Remix) ft. Kendrick Lamar" - Clean
+9) "Wildest Dreams" - Clean
+10) "How You Get The Girl" - Clean
+11) "This Love" - Clean
+12) "I Know Places" - Clean
+13) "Clean" - Clean
+14) "Wonderland" - Clean
+15) "You Are in Love" - Clean
+16) "New Romantics" - Clean
+17) "Slut!" - Clean
+18) "Say Don’t Go" - Clean
+19) "Now That We Don’t Talk" - Clean
+20) "Suburban Legends" - Clean
+21) "Is It Over Now?" - Clean
+In summary, there are 0 explicit songs in the 1989 album.
+
+Album name : Lover
+1) "...Ready For it?" - Clean
+2) "End Game ft. Ed Sheeran and Future" - Clean
+3) "I Did Something Bad" - Clean
+4) "Don’t Blame Me" - Clean
+5) "Delicate" - Clean
+6) "Look What You Made Me Do" - Clean
+7) "So It Goes..." - Clean
+8) "Gorgeous" - Clean
+9) "Getaway Car" - Clean
+10) "King of My Heart" - Clean
+11) "Dancing With Our Hands Tied" - Clean
+12) "Dress" - Clean
+13) "This Is Why We Can’t Have Nice Things" - Clean
+14) "Call It What You Want" - Clean
+15) "New Year’s Day" - Clean
+In summary, there are 0 explicit songs in the Reputation album.
+
+Album name : Folklore
+1) "I Forgot That You Existed" - Clean
+2) "Cruel Summer" - Clean
+3) "Lover" - Clean
+4) "The Man" - Clean
+5) "The Archer" - Clean
+6) "I Think He Knows" - Clean
+7) "Miss Americana & The Heartbreak Prince" - Clean
+8) "Paper Rings" - Clean
+9) "Cornelia Street" - Clean
+10) "Death By A Thousand Cuts" - Clean
+11) "London Boy" - Clean
+12) "Soon You’ll Get Better" - Clean
+13) "False God" - Clean
+14) "You Need To Calm Down" - Clean
+15) "Afterglow" - Clean
+16) "ME! ft. Brendon Urie" - Clean
+17) "It’s Nice To Have A Friend" - Clean
+18) "Daylight" - Clean
+19) "All Of The Girls You Loved Before" - Clean
+In summary, there are 0 explicit songs in the Lover album.
+
+Album name : Evermore
+1) "the 1" - Explicit
+2) "cardigan" - Clean
+3) "the last great american dynasty" - Explicit
+4) "exile" - Clean
+5) "​my tears ricochet" - Clean
+6) "mirrorball" - Clean
+7) "seven" - Clean
+8) "august" - Clean
+9) "​this is me trying" - Clean
+10) "​illicit affairs" - Clean
+11) "​invisible string" - Clean
+12) "​mad woman" - Explicit
+13) "epiphany" - Clean
+14) "betty" - Explicit
+15) "peace" - Explicit
+16) "hoax" - Clean
+17) "​the lakes" - Clean
+In summary, there are 5 explicit songs in the Folklore album.
+
+Album name : Midnights
+1) "willow" - Clean
+2) "​champagne problems" - Explicit
+3) "gold rush" - Explicit
+4) "​’tis the damn season" - Clean
+5) "​tolerate it" - Explicit
+6) "​no body, no crime ft. HAIM" - Clean
+7) "​happiness" - Explicit
+8) "​dorothea" - Clean
+9) "​coney island" - Clean
+10) "ivy" - Explicit
+11) "​cowboy like me" - Explicit
+12) "​l​ong story short" - Clean
+13) "marjorie" - Clean
+14) "​closure" - Clean
+15) "evermore" - Clean
+16) "​r​ight where you left me" - Clean
+17) "​it’s time to go" - Clean
+In summary, there are 6 explicit songs in the Evermore album.
+
+Album name : Specials
+1) "Lavender Haze" - Explicit
+2) "Maroon" - Explicit
+3) "Anti-Hero" - Clean
+4) "Snow On The Beach ft. Lana Del Ray" - Explicit
+5) "You’re On Your Own, Kid" - Clean
+6) "Midnight Rain" - Clean
+7) "Question...?" - Explicit
+8) "Vigilante Shit" - Explicit
+9) "Bejeweled" - Clean
+10) "Labyrinth" - Clean
+11) "Karma" - Explicit
+12) "Sweet Nothing" - Clean
+13) "Mastermind" - Clean
+14) "The Great War" - Clean
+15) "Bigger Than The Whole Sky" - Clean
+16) "Paris" - Clean
+17) "High Infidelity" - Clean
+18) "Glitch" - Clean
+19) "Would’ve, Could’ve, Should’ve" - Clean
+20) "Dear Reader" - Clean
+21) "Hits Different" - Clean
+22) "You’re Losing Me" - Clean
+In summary, there are 6 explicit songs in the Midnights album.
+
+Album name : wrong input
+1) "Safe & Sound ft. The Civil Wars" - Clean
+2) "Eyes Open" - Clean
+3) "Crazier" - Clean
+4) "I Don’t Wanna Live Forever" - Clean
+5) "Carolina" - Clean
+6) "Renegade" - Explicit
+7) "Christmas Tree Farm" - Clean
+8) "Beautiful Ghosts" - Clean
+9) "Only The Young" - Clean
+10) "The Joker And The Queen" - Clean
+11) "Sweeter Than Fiction" - Clean
+In summary, there are 1 explicit songs in the Specials album.
+
+***In summary, there are 20 explicit songs in Taylor's discography.The album with the most explicit songs is Midnights with 6 explicit songs***

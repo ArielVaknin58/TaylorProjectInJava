@@ -1,13 +1,14 @@
 Summary file for the word love in the Specials album.
-1) ""Safe & Sound ft. The Civil Wars"" : 0 times
-2) ""Eyes Open"" : 0 times
-3) ""Crazier"" : 0 times
-4) ""I Don’t Wanna Live Forever"" : 1 times
-5) ""Carolina"" : 0 times
-6) ""Renegade"" : 3 times
-7) ""Christmas Tree Farm"" : 5 times
-8) ""Beautiful Ghosts"" : 1 times
-9) ""Only The Young"" : 0 times
-10) ""The Joker And The Queen"" : 0 times
-11) ""Sweeter Than Fiction"" : 0 times
-*** In Total, the word "love" appears 10 times in the album "Specials".
+1) "Safe & Sound ft. The Civil Wars" : 0 times
+2) "Eyes Open" : 0 times
+3) "Crazier" : 0 times
+4) "I Don’t Wanna Live Forever" : 1 times
+5) "Carolina" : 0 times
+6) "Renegade" : 3 times
+7) "Christmas Tree Farm" : 5 times
+8) "Beautiful Ghosts" : 1 times
+9) "Only The Young" : 0 times
+10) "The Joker And The Queen" : 0 times
+11) "Sweeter Than Fiction" : 0 times
+
+*** In Total, the word "love" appears 10 times on the album "Specials".

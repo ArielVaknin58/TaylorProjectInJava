@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Album {
@@ -66,16 +67,13 @@ public class Album {
         }
         catch (FileNotFoundException e)
         {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
+             System.out.println("An error occurred.");
         }
-
         return album;
-
     }
 
 
-    public static void LongestAndShortestSongsInAlbum(Album album)
+    public static void LongestAndShortestSongsInAlbum(Album album)//This method finds the longest and shortest songs in a given album.
     {
         Scanner Keyboard = new Scanner(System.in);
         System.out.println("Would you like a summary report ? 1 for yes / 0 for no :");
@@ -96,13 +94,10 @@ public class Album {
            for(int i = 1 ; i <= album.NumOfSongs ; i++)
            {
                if(array[i].DurationInSec >= MaxSong.DurationInSec)
-               {
                    MaxSong = array[i];
-               }
                if(array[i].DurationInSec < MinSong.DurationInSec)
-               {
                    MinSong = array[i];
-               }
+
                AlbumCounter += array[i].DurationInSec;
            }
            int Hours = AlbumCounter / 3600;
@@ -123,13 +118,10 @@ public class Album {
                 {
                     writer.write(i+") "+array[i].SongName+" : "+Song.GetSongHours(array[i])+":"+Song.GetSongSeconds(array[i])+"\n");
                     if(array[i].DurationInSec >= MaxSong.DurationInSec)
-                    {
                         MaxSong = array[i];
-                    }
+
                     if(array[i].DurationInSec < MinSong.DurationInSec)
-                    {
                         MinSong = array[i];
-                    }
                 }
 
                 writer.write("\n*** In summary, the longest song on the album is "+MaxSong.SongName+" which is "+Song.GetSongHours(MaxSong)+"m and "+Song.GetSongSeconds(MaxSong)+"s long.\n");
@@ -143,7 +135,7 @@ public class Album {
         }
     }
 
-    public static void NumOfWordsInDiscography(Album[] array)
+    public static void NumOfWordsInDiscography(Album[] array)//This method counts the number of words in Taylor's discography.
     {
         System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
         Scanner Keyboard = new Scanner(System.in);
@@ -151,14 +143,14 @@ public class Album {
         Main.InputCheck(0,1,Keyboard,choice);
         int TotalCounter = 0;
 
-        if(choice == 0)
+        if(choice == 0)//The user chose to not create a summary file.
         {
             for(int i = 1; i < array.length ; i++)
                 TotalCounter += NumOfWordsInAlbum(array[i]);
 
             System.out.println("There are "+TotalCounter+" words in Taylor's discography.");
         }
-        else if(choice == 1)
+        else if(choice == 1)//The user chose to create a summary file.
         {
             Song TotalMaxSong = array[1].SongsArray[1];
             Song TotalMinSong = array[1].SongsArray[1];
@@ -215,12 +207,108 @@ public class Album {
             }catch (IOException e)
             {
                 System.out.println("An error occurred.");
-                e.printStackTrace();
             }
         }
     }
 
-    public static int AvgSongLengthInAlbum(Album album)
+    public static int WordCounterInAlbum(String word,Album album)//This method counts the number of times a word appears in a given album
+    {
+        int AlbumCounter = 0;
+        Song[] array = album.SongsArray;
+
+        for (int i = 1; i <= album.NumOfSongs; i++)
+        {
+            int counter = Song.WordCounterInSong(array[i],word);
+            AlbumCounter += counter;
+        }
+
+        return AlbumCounter;
+    }
+
+    public static void WordCounterInAlbumSummaryFile(String word,Album album)//This method counts the appearences of a given word in a given album and produces a file with the details.
+    {
+        String NewFileName = word+" in "+album.AlbumName+" Summary.txt";
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(NewFileName)))
+        {
+            writer.write("Summary file for the word "+word+" in the "+album.AlbumName+" album.\n");
+            int AlbumCounter = 0;
+            for(int i = 1; i <= album.NumOfSongs ; i++)
+            {
+                int counter;
+                counter = Song.WordCounterInSong(album.SongsArray[i],word);
+                writer.write(i+") "+album.SongsArray[i].SongName+" : "+counter+ " times\n");
+                AlbumCounter += counter;
+            }
+            writer.write("\n*** In Total, the word \""+word+"\" appears "+AlbumCounter+" times on the album \""+album.AlbumName+"\".");
+        }
+        catch (IOException e) {
+            System.err.println("Error writing to the file: " + e.getMessage());
+        }
+
+    }
+    public static ArrayList<Song> CountExplicitsInAlbum(Album album)//This method creates and returns an ArrayList of the explicit songs in a given album.
+    {
+        ArrayList<Song> ExplicitSongs = new ArrayList<>();
+        for(int i = 1; i <= album.NumOfSongs ; i++)
+            if(album.SongsArray[i].IsExplicit)
+                ExplicitSongs.add(album.SongsArray[i]);
+        return ExplicitSongs;
+    }
+
+    public static int CountObscenitiesInAlbum(Album album)//This method counts the number of obscenities in a given album.
+    {
+        int AlbumCounter = 0;
+        for(int i = 1 ; i <= album.NumOfSongs ; i++)
+            AlbumCounter += Song.CountObscenitiesInSong(album.SongsArray[i]);
+        return AlbumCounter;
+    }
+
+    public static void CountObscenitiesInAlbumSummary(Album album)//This method counts the number of obscenities in a given album and produces a file with the details.
+    {
+        String FileName = album.AlbumName+" Obscenities Summary.txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
+        {
+            writer.write("Summary file for the number of obscenities in the "+album.AlbumName+" album.\n");
+            int AlbumCounter = 0;
+            for(int i = 1 ; i <= album.NumOfSongs ; i++)
+            {
+                int counter = Song.CountObscenitiesInSong(album.SongsArray[i]);
+                writer.write(i+") "+album.SongsArray[i].SongName+" - "+counter+"\n");
+                AlbumCounter+= counter;
+            }
+            writer.write("\n***In Summary, the "+album.AlbumName+" album has "+AlbumCounter+" obscenities in it.***");
+        }
+        catch (IOException e)
+        {
+            System.out.println("an error has occurred.");
+        }
+    }
+    public static void CountExplicitsInAlbumSummary(Album album)//This method counts the number of explicit songs in a given album and creates a file with the details.
+    {
+        String FileName = album.AlbumName+" Explicits Summary.txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
+        {
+            writer.write("Summary file for Explicit songs in the "+album.AlbumName+" album.\n");
+            int counter = 0;
+            for(int i = 1 ; i <= album.NumOfSongs ; i++)
+            {
+                if(album.SongsArray[i].IsExplicit)
+                {
+                    writer.write(i+") "+album.SongsArray[i].SongName+" - Explicit\n");
+                    counter++;
+                }
+                else
+                    writer.write(i+") "+album.SongsArray[i].SongName+" - Clean\n");
+            }
+            writer.write("\n***In Summary, the "+album.AlbumName+" album has "+counter+" explicit songs in it.");
+        }
+        catch (IOException e)
+        {
+            System.out.println("an error has occurred.");
+        }
+    }
+
+    public static int AvgSongLengthInAlbum(Album album)//This function returns the average song length in a given album in seconds.
     {
         Song[] array = album.SongsArray;
         int DurationAccumulator = 0;
@@ -230,56 +318,8 @@ public class Album {
         return (DurationAccumulator / album.NumOfSongs);
     }
 
-    public static void AvgSongLengthInDiscography(Album[] array)
-    {
-        System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
-        System.out.print("----->");
-        Scanner Keyboard = new Scanner(System.in);
-        int FileChoice = Keyboard.nextInt();
-        Main.InputCheck(0,1,Keyboard,FileChoice);
-        if(FileChoice == 0) {
-            int TotalAvgAccumulater = 0;
-            System.out.println();
-            for (int i = 1; i <= Main.DiscographyLength; i++)
-            {
-                int AlbumCounter = AvgSongLengthInAlbum(array[i]);
-                TotalAvgAccumulater += AlbumCounter;
-                System.out.println("In the "+array[i].AlbumName+" album the song average is "+AlbumCounter/60+"m and "+AlbumCounter%60+"s.");
-            }
-            System.out.println("The total song average in Taylor's discography is "+TotalAvgAccumulater/60+"m and "+TotalAvgAccumulater%60+"s");
-        }
-        else if(FileChoice == 1)
-        {
-            String FileName = "Song Average Full Summary.txt";
-            try(BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
-            {
-                writer.write("Summary file for song averages in Taylor's discography\n\n");
-                int TotalAvg = 0;
-                for(int i = 1 ; i <= Main.DiscographyLength ; i++)
-                {
-                    writer.write("Album name : "+array[i].AlbumName+"\n");
-                    Song[] AlbumArray = array[i].SongsArray;
-                    for(int j = 1 ; j <= array[i].NumOfSongs ; j++)
-                    {
-                        writer.write(j+") "+AlbumArray[j].SongName+" : "+Song.GetSongHours(AlbumArray[j])+":"+Song.GetSongSeconds(AlbumArray[j])+"\n");
-                    }
-                    int average = AvgSongLengthInAlbum(array[i]);
-                    TotalAvg += average;
-                    writer.write("In summary, the song average in the "+array[i].AlbumName+" album is "+average/60+"m and "+average%60+"s.\n\n");
-                }
-                TotalAvg = TotalAvg / Main.DiscographyLength;
-                writer.write("***In summary, the average song length in Taylor's discography is "+TotalAvg/60+"m and "+TotalAvg%60+"s ***");
-                System.out.println("*** Summary file has been created ! ***");
 
-            }catch (IOException e)
-            {
-                System.out.println("An error occurred.");
-                e.printStackTrace();
-            }
-
-        }
-    }
-    public static int NumOfWordsInAlbum(Album album)
+    public static int NumOfWordsInAlbum(Album album)//This method returns the number of words in a given album.
     {//NEEDED THE OPEN ALBUM FILE AND ALBUM NUMBER
 
         int AlbumCounter = 0;
@@ -291,7 +331,7 @@ public class Album {
         return AlbumCounter;
     }
 
-    public static void NumOfWordsInAlbumSummary(Album album)
+    public static void NumOfWordsInAlbumSummary(Album album)//This method counts the number of words in a given album and produces a file with the details.
     {
         String FileName = album.AlbumName+" - Word counter.txt";
         File file = new File(FileName);
@@ -314,7 +354,7 @@ public class Album {
         }
     }
 
-    public static Song[] CreateAlbumArray(Album album)
+    public static Song[] CreateAlbumArray(Album album)//This method creates and returns an array of the songs of the given album.
     {
         album = Album.GetAlbumDetails(album.file,album.AlbumNumber);
         Song[] AlbumArray = new Song[album.NumOfSongs + 1];
@@ -326,7 +366,7 @@ public class Album {
                 Song song = new Song();
                 temp = AlbumReader.nextLine();
                 File SongFile = new File(temp);
-                song = song.GetSongInformation(SongFile);
+                song = Song.GetSongInformation(SongFile);
                 song.Path = temp;
                 AlbumArray[i] = song;
             }
