@@ -206,7 +206,7 @@ Album name : Evermore
 In total, There are 10 obscenities in the Evermore album.
 
 Album name : Midnights
-1) "Lavender Haze" : 7 times
+1) "Lavender Haze" : 10 times
 2) "Maroon" : 1 times
 3) "Anti-Hero" : 0 times
 4) "Snow On The Beach ft. Lana Del Ray" : 0 times
@@ -228,7 +228,7 @@ Album name : Midnights
 20) "Dear Reader" : 0 times
 21) "Hits Different" : 4 times
 22) "You’re Losing Me" : 0 times
-In total, There are 17 obscenities in the Midnights album.
+In total, There are 20 obscenities in the Midnights album.
 
 Album name : Specials
 1) "Safe & Sound ft. The Civil Wars" : 0 times
@@ -244,4 +244,6 @@ Album name : Specials
 11) "Sweeter Than Fiction" : 0 times
 In total, There are 3 obscenities in the Specials album.
 
-***** In Total, There are 41 obscenities in Taylor's Entire Discography *****
+***** In Total, There are 44 obscenities in Taylor's Entire Discography.
+The song with the most obscenities from Taylor's discography is "Lavender Haze" with 10 obscenities.
+The album with the most obscenities is Midnights with 20 obscenities***

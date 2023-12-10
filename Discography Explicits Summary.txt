@@ -1,5 +1,5 @@
 Summary file for Explicit songs in Taylor's discography.
-Album name : Fearless
+Album name : Debut
 1) "Tim McGraw" - Clean
 2) "Picture to Burn" - Clean
 3) "Teardrops On My Guitar" - Clean
@@ -16,7 +16,7 @@ Album name : Fearless
 14) "A Perfectly Good Heart" - Clean
 In summary, there are 0 explicit songs in the Debut album.
 
-Album name : Speak Now
+Album name : Fearless
 1) "Fearless" - Clean
 2) "Fifteen" - Clean
 3) "Love Story" - Clean
@@ -44,7 +44,7 @@ Album name : Speak Now
 25) "Bye Bye Baby" - Clean
 In summary, there are 0 explicit songs in the Fearless album.
 
-Album name : Red
+Album name : Speak Now
 1) "Mine" - Clean
 2) "Sparks Fly" - Clean
 3) "Back To December" - Clean
@@ -69,7 +69,7 @@ Album name : Red
 22) "Timeless" - Clean
 In summary, there are 0 explicit songs in the Speak Now album.
 
-Album name : 1989
+Album name : Red
 1) "State of Grace" - Clean
 2) "Red" - Clean
 3) "Treacherous" - Clean
@@ -101,7 +101,7 @@ Album name : 1989
 29) "All Too Well (10 Minute Version)" - Explicit
 In summary, there are 2 explicit songs in the Red album.
 
-Album name : Reputation
+Album name : 1989
 1) "Welcome to New York" - Clean
 2) "Blank Space" - Clean
 3) "Style" - Clean
@@ -125,7 +125,7 @@ Album name : Reputation
 21) "Is It Over Now?" - Clean
 In summary, there are 0 explicit songs in the 1989 album.
 
-Album name : Lover
+Album name : Reputation
 1) "...Ready For it?" - Clean
 2) "End Game ft. Ed Sheeran and Future" - Clean
 3) "I Did Something Bad" - Clean
@@ -143,7 +143,7 @@ Album name : Lover
 15) "New Year’s Day" - Clean
 In summary, there are 0 explicit songs in the Reputation album.
 
-Album name : Folklore
+Album name : Lover
 1) "I Forgot That You Existed" - Clean
 2) "Cruel Summer" - Clean
 3) "Lover" - Clean
@@ -165,7 +165,7 @@ Album name : Folklore
 19) "All Of The Girls You Loved Before" - Clean
 In summary, there are 0 explicit songs in the Lover album.
 
-Album name : Evermore
+Album name : Folklore
 1) "the 1" - Explicit
 2) "cardigan" - Clean
 3) "the last great american dynasty" - Explicit
@@ -185,7 +185,7 @@ Album name : Evermore
 17) "​the lakes" - Clean
 In summary, there are 5 explicit songs in the Folklore album.
 
-Album name : Midnights
+Album name : Evermore
 1) "willow" - Clean
 2) "​champagne problems" - Explicit
 3) "gold rush" - Explicit
@@ -205,7 +205,7 @@ Album name : Midnights
 17) "​it’s time to go" - Clean
 In summary, there are 6 explicit songs in the Evermore album.
 
-Album name : Specials
+Album name : Midnights
 1) "Lavender Haze" - Explicit
 2) "Maroon" - Explicit
 3) "Anti-Hero" - Clean
@@ -230,7 +230,7 @@ Album name : Specials
 22) "You’re Losing Me" - Clean
 In summary, there are 6 explicit songs in the Midnights album.
 
-Album name : wrong input
+Album name : Specials
 1) "Safe & Sound ft. The Civil Wars" - Clean
 2) "Eyes Open" - Clean
 3) "Crazier" - Clean
@@ -244,4 +244,5 @@ Album name : wrong input
 11) "Sweeter Than Fiction" - Clean
 In summary, there are 1 explicit songs in the Specials album.
 
-***In summary, there are 20 explicit songs in Taylor's discography.The album with the most explicit songs is Midnights with 6 explicit songs***
+***In summary, there are 20 explicit songs in Taylor's discography.
+The album with the most explicit songs is Midnights with 6 explicit songs***

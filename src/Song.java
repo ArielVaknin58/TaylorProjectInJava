@@ -4,53 +4,51 @@ import java.lang.Integer; // used for the ParseInt method
 
 
 public class Song {
-    public String SongName;//Holds a string containing the name of the song.
-    public String Path;//Holds the path to the song,to be given in order to open the file in other methods.
-    int counter;//Holds the number of appearances of the given word in the song
-    int DurationInSec;//Holds the duration of the song in seconds.
-    boolean IsExplicit;//If the song has the Explicit label.
+    private String SongName;//Holds a string containing the name of the song.
+    private String Path;//Holds the path to the song,to be given in order to open the file in other methods.
+    private int DurationInSec;//Holds the duration of the song in seconds.
+    private boolean IsExplicit;//If the song has the Explicit label.
 
     public Song()
     {
         this.SongName = "";
         this.Path = "bloop";
-        this.counter = 0;
         this.DurationInSec = 0;
         this.IsExplicit = false;
     }
 
-    public static int GetSongHours(Song song)
-    {
-        return song.DurationInSec  / 60;
-    }
-
-    public static int GetSongSeconds(Song song)
-    {
-        return song.DurationInSec % 60;
-    }
+    public void SetSongName(String Name) { SongName = Name;}
+    public String GetSongName() {return SongName;}
+    public void SetSongPath(String SongPath) { Path = SongPath;}
+    public String GetSongPath() {return Path;}
+    public int GetDurationInSec() {return DurationInSec;}
+    public void SetDurationInSec(int Duration){ if(Duration >= 0) {DurationInSec = Duration;}}
+    public boolean GetIsExplicit() {return IsExplicit;}
+    public void SetIsExplicit(boolean IfEx) {IsExplicit = IfEx;}
+    public static int GetSongHours(Song song) {return song.DurationInSec  / 60; }
+    public static int GetSongSeconds(Song song) {return song.DurationInSec % 60; }
 
     public static Song GetSongInformation(File file)//This method constructs a song object from its file.
-    {//Modifies only SongName and it's duration.
+    {//Modifies all except path.
         Song song = new Song();
         try(Scanner SongReader = new Scanner(file))
         {
             String temp = SongReader.nextLine();
-            song.SongName = temp;//read the file name
+            song.SetSongName(temp);//read the song name
 
             temp = SongReader.nextLine();
             String minutes = temp.substring(0,2);
-            song.DurationInSec = (Integer.parseInt(minutes))*60;
             String seconds = temp.substring(3,5);
+            int Min = (Integer.parseInt(minutes))*60;
+            int Sec = Integer.parseInt(seconds);
+            int Duration = Min + Sec;
+            song.SetDurationInSec(Duration);//calculate the duration of the song
             String IsEx = temp.substring(5);
             if(IsEx.equals("E"))
-                song.IsExplicit = true;
-            song.DurationInSec += Integer.parseInt(seconds);//calculate the duration of the song
+                song.SetIsExplicit(true);
 
         }
-        catch(FileNotFoundException e)
-        {
-            System.out.println("An error occurred.");
-        }
+        catch(FileNotFoundException e) {System.out.println("An error occurred.");}
         return song;
     }
 
@@ -59,17 +57,19 @@ public class Song {
         int WordCounter = 0;
         String temp;
 
-        File file = new File(song.Path);
+        File file = new File(song.GetSongPath());
         try(Scanner myReader = new Scanner(file))
         {
-
-            song.SongName = myReader.nextLine();
+            temp = myReader.nextLine();
+            song.SetSongName(temp);
             temp = myReader.nextLine();
 
             String minutes = temp.substring(0,2);
-            song.DurationInSec = (Integer.parseInt(minutes))*60;
             String seconds = temp.substring(3,5);
-            song.DurationInSec += Integer.parseInt(seconds);
+            int Min = (Integer.parseInt(minutes))*60;
+            int Sec = Integer.parseInt(seconds);
+            int Duration = Min + Sec;
+            song.SetDurationInSec(Duration);
 
             while (myReader.hasNextLine())
             {
@@ -80,16 +80,13 @@ public class Song {
                 if(temp.compareToIgnoreCase(word) == 0)
                     WordCounter++;
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.//");
-        }
-        song.counter = WordCounter;
+        } catch (FileNotFoundException e) {System.out.println("An error occurred.//");}
         return WordCounter;
     }
 
     public static int CountObscenitiesInSong(Song song)//This method counts and returns the number of obscenities in a given song.
     {
-        File SongFile = new File(song.Path);
+        File SongFile = new File(song.GetSongPath());
         int ObscenitiesCounter  = 0;
         try(Scanner SongReader = new Scanner(SongFile))
         {
@@ -99,21 +96,15 @@ public class Song {
             while(SongReader.hasNext())
             {
                 temp = SongReader.next();
-                if(temp.contains("[") || (temp.contains("]")))
-                    continue;
-                else if(temp.equalsIgnoreCase("bitch")||temp.equalsIgnoreCase("damn")||temp.equalsIgnoreCase("shit")||temp.equalsIgnoreCase("fuck")||temp.equalsIgnoreCase("damned"))
+                if(temp.equalsIgnoreCase("bitch")||temp.equalsIgnoreCase("damn")||temp.equalsIgnoreCase("shit")||temp.equalsIgnoreCase("fuck")||temp.equalsIgnoreCase("damned"))
                     ObscenitiesCounter++;
             }
-        }catch (IOException e) {
-            System.err.println("Error writing to the file: " + e.getMessage());
-        }
+        }catch (IOException e) {System.err.println("Error writing to the file: " + e.getMessage());}
         return ObscenitiesCounter;
     }
     public static int NumOfWordsInASong(Song song)//counts the number of words in a song
     {
-        File SongFile = new File(song.Path);
-        //song = song.GetSongInformation(SongFile);
-
+        File SongFile = new File(song.GetSongPath());
         int WordCounter = 0;
         try(Scanner SongReader = new Scanner(SongFile))
         {
@@ -123,14 +114,10 @@ public class Song {
             while(SongReader.hasNext())
             {
                 temp = SongReader.next();
-                if(temp.contains("[") || (temp.contains("]")))
-                    continue;
-                else
+                if(!(temp.contains("[") || (temp.contains("]"))))
                     WordCounter++;
             }
-        }catch (IOException e) {
-            System.err.println("Error writing to the file: " + e.getMessage());
-        }
+        }catch (IOException e) {System.err.println("Error writing to the file: " + e.getMessage());}
         return WordCounter;
     }
 
@@ -145,11 +132,11 @@ public class Song {
         {
             int TotalAvgAccumulator = 0;
             System.out.println();
-            for (int i = 1; i <= Main.DiscographyLength; i++)
+            for (int i = 1; i <= Main.getDiscographyLength(); i++)
             {
                 int AlbumCounter = Album.AvgSongLengthInAlbum(array[i]);
                 TotalAvgAccumulator += AlbumCounter;
-                System.out.println("In the "+array[i].AlbumName+" album the song average is "+AlbumCounter/60+"m and "+AlbumCounter%60+"s.");
+                System.out.println("In the "+array[i].GetAlbumName()+" album the song average is "+AlbumCounter/60+"m and "+AlbumCounter%60+"s.");
             }
             System.out.println("The total song average in Taylor's discography is "+TotalAvgAccumulator/60+"m and "+TotalAvgAccumulator%60+"s");
         }
@@ -160,25 +147,21 @@ public class Song {
             {
                 writer.write("Summary file for song averages in Taylor's discography\n\n");
                 int TotalAvg = 0;
-                for(int i = 1 ; i <= Main.DiscographyLength ; i++)
+                for(int i = 1 ; i <= Main.getDiscographyLength() ; i++)
                 {
-                    writer.write("Album name : "+array[i].AlbumName+"\n");
-                    Song[] AlbumArray = array[i].SongsArray;
-                    for(int j = 1 ; j <= array[i].NumOfSongs ; j++)
-                        writer.write(j+") "+AlbumArray[j].SongName+" : "+Song.GetSongHours(AlbumArray[j])+":"+Song.GetSongSeconds(AlbumArray[j])+"\n");
+                    writer.write("Album name : "+array[i].GetAlbumName()+"\n");
+                    Song[] AlbumArray = array[i].GetSongsArray();
+                    for(int j = 1 ; j <= array[i].GetNumOfSongs() ; j++)
+                        writer.write(j+") "+AlbumArray[j].GetSongName()+" : "+Song.GetSongHours(AlbumArray[j])+":"+Song.GetSongSeconds(AlbumArray[j])+"\n");
 
                     int average = Album.AvgSongLengthInAlbum(array[i]);
                     TotalAvg += average;
-                    writer.write("In summary, the song average in the "+array[i].AlbumName+" album is "+average/60+"m and "+average%60+"s.\n\n");
+                    writer.write("In summary, the song average in the "+array[i].GetAlbumName()+" album is "+average/60+"m and "+average%60+"s.\n\n");
                 }
-                TotalAvg = TotalAvg / Main.DiscographyLength;
+                TotalAvg = TotalAvg / Main.getDiscographyLength();
                 writer.write("***In summary, the average song length in Taylor's discography is "+TotalAvg/60+"m and "+TotalAvg%60+"s ***");
                 System.out.println("*** Summary file has been created ! ***");
-            }catch (IOException e)
-            {
-                System.out.println("An error occurred.");
-            }
-
+            }catch (IOException e) {System.out.println("An error occurred.");}
         }
     }
 }
