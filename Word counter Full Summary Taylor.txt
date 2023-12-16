@@ -15,7 +15,7 @@ Album Name : Debut
 12) "I’m Only Me When I’m With You" : 304 words
 13) "Invisible" : 250 words
 14) "A Perfectly Good Heart" : 232 words
-In summary, in the Debut album there are 4013 words.
+In summary, in the Debut album there are 4013 words, among them 663 unique words.
 The longest song on the album is "Our Song" with 371 words
 The shortest song on the album is "A Perfectly Good Heart" with 232 words.
 
@@ -45,7 +45,7 @@ Album Name : Fearless
 23) "That’s When ft. Keith Urban" : 342 words
 24) "Don’t You" : 242 words
 25) "Bye Bye Baby" : 343 words
-In summary, in the Fearless album there are 8490 words.
+In summary, in the Fearless album there are 8490 words, among them 1041 unique words.
 The longest song on the album is "Mr. Perfectly Fine" with 412 words
 The shortest song on the album is "Come In With The Rain" with 229 words.
 
@@ -72,7 +72,7 @@ Album Name : Speak Now
 20) "Castles Crumbling ft. Hayley Williams" : 353 words
 21) "Foolish One" : 461 words
 22) "Timeless" : 525 words
-In summary, in the Speak Now album there are 8853 words.
+In summary, in the Speak Now album there are 8853 words, among them 1261 unique words.
 The longest song on the album is "Better Than Revenge" with 532 words
 The shortest song on the album is "Ours" with 297 words.
 
@@ -106,7 +106,7 @@ Album Name : Red
 27) "Run ft. Ed Sheeran" : 394 words
 28) "The Very First Night" : 401 words
 29) "All Too Well (10 Minute Version)" : 968 words
-In summary, in the Red album there are 11125 words.
+In summary, in the Red album there are 11125 words, among them 1299 unique words.
 The longest song on the album is "All Too Well (10 Minute Version)" with 968 words
 The shortest song on the album is "Sad Beautiful Tragic" with 188 words.
 
@@ -132,7 +132,7 @@ Album Name : 1989
 19) "Now That We Don’t Talk" : 282 words
 20) "Suburban Legends" : 305 words
 21) "Is It Over Now?" : 401 words
-In summary, in the 1989 album there are 9059 words.
+In summary, in the 1989 album there are 9059 words, among them 1094 unique words.
 The longest song on the album is "Out Of The Woods" with 667 words
 The shortest song on the album is "Now That We Don’t Talk" with 282 words.
 
@@ -152,7 +152,7 @@ Album Name : Reputation
 13) "This Is Why We Can’t Have Nice Things" : 399 words
 14) "Call It What You Want" : 520 words
 15) "New Year’s Day" : 369 words
-In summary, in the Reputation album there are 7246 words.
+In summary, in the Reputation album there are 7246 words, among them 948 unique words.
 The longest song on the album is "End Game ft. Ed Sheeran and Future" with 737 words
 The shortest song on the album is "New Year’s Day" with 369 words.
 
@@ -176,7 +176,7 @@ Album Name : Lover
 17) "It’s Nice To Have A Friend" : 156 words
 18) "Daylight" : 482 words
 19) "All Of The Girls You Loved Before" : 321 words
-In summary, in the Lover album there are 7116 words.
+In summary, in the Lover album there are 7116 words, among them 1092 unique words.
 The longest song on the album is "Miss Americana & The Heartbreak Prince" with 513 words
 The shortest song on the album is "It’s Nice To Have A Friend" with 156 words.
 
@@ -198,7 +198,7 @@ Album Name : Folklore
 15) "peace" : 287 words
 16) "hoax" : 242 words
 17) "​the lakes" : 232 words
-In summary, in the Folklore album there are 5145 words.
+In summary, in the Folklore album there are 5145 words, among them 1118 unique words.
 The longest song on the album is "exile" with 480 words
 The shortest song on the album is "epiphany" with 183 words.
 
@@ -220,7 +220,7 @@ Album Name : Evermore
 15) "evermore" : 362 words
 16) "​r​ight where you left me" : 407 words
 17) "​it’s time to go" : 377 words
-In summary, in the Evermore album there are 6063 words.
+In summary, in the Evermore album there are 6063 words, among them 1147 unique words.
 The longest song on the album is "​happiness" with 431 words
 The shortest song on the album is "​closure" with 230 words.
 
@@ -247,7 +247,7 @@ Album Name : Midnights
 20) "Dear Reader" : 266 words
 21) "Hits Different" : 458 words
 22) "You’re Losing Me" : 396 words
-In summary, in the Midnights album there are 7530 words.
+In summary, in the Midnights album there are 7530 words, among them 1313 unique words.
 The longest song on the album is "Would’ve, Could’ve, Should’ve" with 500 words
 The shortest song on the album is "Glitch" with 233 words.
 
@@ -263,11 +263,12 @@ Album Name : Specials
 9) "Only The Young" : 297 words
 10) "The Joker And The Queen" : 214 words
 11) "Sweeter Than Fiction" : 473 words
-In summary, in the Specials album there are 3400 words.
+In summary, in the Specials album there are 3400 words, among them 649 unique words.
 The longest song on the album is "Renegade" with 485 words
 The shortest song on the album is "The Joker And The Queen" with 214 words.
 
 ***In summary, there are 78040 words in Taylor's entire discography.
+There are 4439 unique words in Taylor's entire discography.
 The longest song on Taylor's discography is "All Too Well (10 Minute Version)" with 968 words
 The shortest song on the album is "It’s Nice To Have A Friend" with 156 words.
 
