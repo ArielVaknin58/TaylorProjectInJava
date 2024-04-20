@@ -436,7 +436,7 @@ public class Artist {
         {
             case 0:
                 System.out.print("\n0) Whole Discography \n1) Taylor Swift (Debut) \n2) Fearless \n3) Speak Now \n4) Red \n5) 1989 \n6) Reputation ");
-                System.out.print("\n7) Lover \n8) Folklore \n9) Evermore \n10) Midnights \n11) The Tortured Poets Department (Coming Soon..) \n12) Special Songs (Soundtracks and Non-Album Collabs)");
+                System.out.print("\n7) Lover \n8) Folklore \n9) Evermore \n10) Midnights \n11) The Tortured Poets Department \n12) Special Songs (Soundtracks and Non-Album Collabs)");
                 break;
             case 1:
                 System.out.print("\n0) Whole Discography \n1) As She Pleases \n2) Life Support \n3) Silence Between Songs \n4) Specials & Collabs\n");
@@ -507,15 +507,17 @@ public class Artist {
                         System.out.print("\n14) The Great War \n15) Bigger Than The Whole Sky \n16) Paris \n17) High Indifelity \n18) Glitch \n19) Would've, Could've, Should've \n20) Dear Reader ");
                         System.out.print("\n21) Hits Different \n22) You're Loosing Me");
                         break;
-                    case 11://For picking Specials
-                        System.out.print("\n0) All Songs \n1) Safe & Sound ft. The Civil Wars \n2) Eyes Open \n3) Crazier \n4) I Don't Wanna Live Forever ft. Zayn \n5) Carolina \n6) Renegade ft. Big Red Machine \n7) Christmas Tree Farm \n8) Beautiful Ghosts");
-                        System.out.print("\n9) Only The Young \n10) The Joker And The Queen ft. Ed Sheeran \n11) Sweeter Than Fiction ");
-                        break;
-                    case 12:
+                    case 11:
                         System.out.print("\n0) All Songs \n1) Fortnight ft. Post Malone \n2) The Tortured Poets Department \n3) My Boy Only Breaks His Favorite Toys \n4) Down Bad \n5) So long,London \n6) But Daddy I Love Him \n7) Fresh Out The Slammer \n8) Florida!!! ft. Florence + The Machine");
                         System.out.print("\n9) Guilty As Sin? \n10) Who's Afraid of Little Old Me? \n11) I Can Fix Him (No I Really Can) ");
-                        System.out.print("\n12) loml \n13) I Can Do it With A Broken Heart \n14) The Smallest Man Who Ever Lived \n15) The Alchemy \n16) Clara Bow \n17) --- \n18) --- ");
-                        System.out.print("\n19) --- \n20) ---");
+                        System.out.print("\n12) loml \n13) I Can Do it With A Broken Heart \n14) The Smallest Man Who Ever Lived \n15) The Alchemy \n16) Clara Bow \n17) The Black Dog \n18) imgonnagetyouback ");
+                        System.out.print("\n19) The Albatross \n20) Chloe or Sam or Sophia or Marcus \n21) How Did it End? \n22) So High School \n23) I Hate It Here \n24) thanK you aIMee \n25) I Look in People's Windows \n26) The Prophecy");
+                        System.out.print("\n27) Cassandra \n28) Peter \n29) The Bolter \n30) Robin \n31) The Manuscript");
+
+                        break;
+                    case 12://For picking Specials
+                        System.out.print("\n0) All Songs \n1) Safe & Sound ft. The Civil Wars \n2) Eyes Open \n3) Crazier \n4) I Don't Wanna Live Forever ft. Zayn \n5) Carolina \n6) Renegade ft. Big Red Machine \n7) Christmas Tree Farm \n8) Beautiful Ghosts");
+                        System.out.print("\n9) Only The Young \n10) The Joker And The Queen ft. Ed Sheeran \n11) Sweeter Than Fiction ");
                         break;
                 }
                 break;

@@ -66,8 +66,8 @@ public class Album {
                 case 8 -> "Folklore";
                 case 9 -> "Evermore";
                 case 10 -> "Midnights";
-                case 11 -> "Specials";
-                case 12 -> "The Tortured Poets Department (TTPD) coming soon..";
+                case 11 -> "The Tortured Poets Department";
+                case 12 -> "Specials";
                 default -> "wrong input";
             };
         }

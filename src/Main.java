@@ -60,7 +60,7 @@ public class Main
                     InputCheck(0,1,Keyboard,ArtistPick);
                     Artist ChosenArtist = ArtistsArray[ArtistPick];
                     System.out.println("Pick one of the options :\n0) to get a random "+ArtistsArray[ArtistPick].getArtistName()+" song\n1) to look up a word \n2) to get Songs/Albums length information \n3) to get information about amount of words");
-                    System.out.println("4) get information about explicit songs :");
+                    System.out.println("4) get information about explicit songs");
                     System.out.println("5) **If running the program in a new PC for the first time**");
                     System.out.println("6) Compare between artists ");
                     System.out.print("----->");
