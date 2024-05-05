@@ -1,10 +1,8 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="ProjectTaylor:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/ProjectTaylor_jar</output-path>
-    <root id="archive" name="ProjectTaylor_jar.jar">
-      <element id="archive" name="ProjectTaylor.jar">
-        <element id="module-output" name="ProjectTaylor" />
-      </element>
+    <root id="archive" name="ProjectTaylor.jar">
+      <element id="module-output" name="ProjectTaylor" />
     </root>
   </artifact>
 </component>

@@ -74,8 +74,8 @@ public class Main
 
                         //Scanner FileReader = new Scanner(args[0]);
                         System.out.println("In which album would you like to search ? choose 1-" + ArtistsArray[ArtistPick].getNumOfAlbums() + " or 0 for the entire discography :");
-                        System.out.print("----->");
                         ChosenArtist.PrintAlbums();
+                        System.out.print("----->");
                         int AlbumPick = Keyboard.nextInt();
                         InputCheck(0, ArtistsArray[ArtistPick].getNumOfAlbums(), Keyboard,AlbumPick);
                         if (AlbumPick == 0)// The user picked to search in the entire discography
