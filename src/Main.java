@@ -63,9 +63,10 @@ public class Main
                     System.out.println("4) get information about explicit songs");
                     System.out.println("5) **If running the program in a new PC for the first time**");
                     System.out.println("6) Compare between artists ");
+                    System.out.println("7) Get your birthday song !");
                     System.out.print("----->");
                     MainPick = Keyboard.nextInt();
-                    InputCheck(0,6,Keyboard,MainPick);
+                    InputCheck(0,7,Keyboard,MainPick);
                     if(MainPick == 1)//The user picked to look up a word
                     {
                         System.out.println("\nPlease enter the word you'd like to search : ");
@@ -417,6 +418,8 @@ public class Main
                             System.out.println("There are "+TaylorObscenitiesCounter+" obscenities in "+ArtistsArray[0].getArtistName()+"'s discography.");
                             System.out.println("There are "+MadisonObscenitiesCounter+" obscenities in "+ArtistsArray[1].getArtistName()+"'s discography.");
                         }
+                    } else if (MainPick == 7) {
+                        BirthdaySong(ArtistsArray[ArtistPick]);
                     }
 
                     System.out.println("Would you like to go again ? choose any number to continue or 0 to exit ");
@@ -432,8 +435,27 @@ public class Main
 
     }
 
-
-
+    public static void BirthdaySong(Artist artist)
+    {
+        //If a person was born on month x and day y (of the month), then their birthday song
+        //would be the y'th song on the x'th album if it exists.
+        Scanner s = new Scanner((System.in));
+        System.out.println("Please enter your birthday month (1-12):");
+        int month = s.nextInt();
+        InputCheck(1,12,s,month);
+        System.out.println("Please enter your birthday day (1-31):");
+        int day = s.nextInt();
+        InputCheck(1,31,s,day);
+        try{
+            Song birthdaySong = artist.getDiscography()[month].GetSongsArray()[day];
+            System.out.println("Your birthday song is "+birthdaySong.GetSongName()+" !");
+        } catch (IndexOutOfBoundsException e) {
+            day /= 2.6; //A slight change to allow for short albums to be included.
+            //Its to make sure that for example December 31st would just land on the last song on the 12th album rather than get a random one.
+            Song birthdaySong = artist.getDiscography()[month].GetSongsArray()[day];
+            System.out.println("Your birthday song is " + birthdaySong.GetSongName() + " !");
+        }
+    }
 
 
     public static void Compare2ArtistsSummary(Artist artist1,Artist artist2)
