@@ -1,8 +1,6 @@
 //import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;// Used to read from the user or files
 import java.lang.Integer; // used for the ParseInt method
 import java.time.LocalDateTime; // Import the LocalDateTime class
@@ -57,16 +55,17 @@ public class Main
                     System.out.println("Welcome ! Please Choose your artist :\n1) Taylor Swift \n2) Madison Beer");
                     System.out.print("----->");
                     int ArtistPick = Keyboard.nextInt();
-                    InputCheck(0,1,Keyboard,ArtistPick);
+                    InputCheck(1,2,Keyboard,ArtistPick);
                     Artist ChosenArtist = ArtistsArray[ArtistPick];
                     System.out.println("Pick one of the options :\n0) to get a random "+ArtistsArray[ArtistPick].getArtistName()+" song\n1) to look up a word \n2) to get Songs/Albums length information \n3) to get information about amount of words");
                     System.out.println("4) get information about explicit songs");
                     System.out.println("5) **If running the program in a new PC for the first time**");
                     System.out.println("6) Compare between artists ");
                     System.out.println("7) Get your birthday song !");
+                    System.out.println("8) Create a CVS file for "+ArtistsArray[ArtistPick].getArtistName()+"'s discography");
                     System.out.print("----->");
                     MainPick = Keyboard.nextInt();
-                    InputCheck(0,7,Keyboard,MainPick);
+                    InputCheck(0,8,Keyboard,MainPick);
                     if(MainPick == 1)//The user picked to look up a word
                     {
                         System.out.println("\nPlease enter the word you'd like to search : ");
@@ -421,6 +420,10 @@ public class Main
                     } else if (MainPick == 7) {
                         BirthdaySong(ArtistsArray[ArtistPick]);
                     }
+                    else if (MainPick == 8)
+                    {
+                        DiscographyCVSfile(ArtistsArray[ArtistPick]);
+                    }
 
                     System.out.println("Would you like to go again ? choose any number to continue or 0 to exit ");
                     System.out.print("----->");
@@ -433,6 +436,33 @@ public class Main
 
         System.out.println("I'll tell you the truth, but never goodbye");
 
+    }
+
+
+    public static void DiscographyCVSfile(Artist artist)
+    {
+        Album[] Discography = artist.getDiscography();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(artist.getArtistName()+"Data.cvs")))
+        {
+            writer.write("name,album,# in album,is Explicit,num of words,duration in sec,path,num of obscenities\n");
+            for(int i = 1; i <= artist.getNumOfAlbums(); i++)
+            {
+                for(int j = 1; j <= Discography[i].GetNumOfSongs();j++)
+                {
+                    writer.write(Discography[i].GetSongsArray()[j].GetSongName()+",");
+                    writer.write(Discography[i].GetAlbumName()+",");
+                    writer.write(j+",");
+                    writer.write(Discography[i].GetSongsArray()[j].GetIsExplicit()+",");
+                    writer.write(Discography[i].GetSongsArray()[j].NumOfWordsInASong()+",");
+                    writer.write(Discography[i].GetSongsArray()[j].GetDurationInSec()+",");
+                    writer.write(Discography[i].GetSongsArray()[j].GetSongPath()+",");
+                    writer.write(Discography[i].GetSongsArray()[j].CountObscenitiesInSong()+"\n");
+                }
+            }
+
+        }
+        catch(IOException e) {System.out.println("An error has occurred.");}
+        System.out.println("***File has been successfully created!***");
     }
 
     public static void BirthdaySong(Artist artist)

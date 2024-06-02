@@ -1,0 +1,244 @@
+name,album,num in album,is Explicit,num of words,duration in sec,path,num of obscenities
+"Tim McGraw",Debut,1,false,366,232,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut1.txt,0
+"Picture to Burn",Debut,2,false,291,173,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut2.txt,0
+"Teardrops On My Guitar",Debut,3,false,288,203,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut3.txt,0
+"A Place In This World",Debut,4,false,232,199,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut4.txt,0
+"Cold as You",Debut,5,false,247,239,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut5.txt,1
+"The Outside",Debut,6,false,234,207,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut6.txt,0
+"Tied Together with a Smile",Debut,7,false,254,248,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut7.txt,0
+"Stay Beautiful",Debut,8,false,261,238,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut8.txt,0
+"Should’ve Said No",Debut,9,false,352,242,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut9.txt,0
+"Mary’s Song (Oh My My My)",Debut,10,false,331,213,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut10.txt,0
+"Our Song",Debut,11,false,371,201,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut11.txt,0
+"I’m Only Me When I’m With You",Debut,12,false,304,213,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut12.txt,0
+"Invisible",Debut,13,false,250,203,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut13.txt,0
+"A Perfectly Good Heart",Debut,14,false,232,220,C:\Users\Ariel\Desktop\ProjectTaylor\Debut\Debut14.txt,0
+"Fearless",Fearless,1,false,316,241,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless1.txt,0
+"Fifteen",Fearless,2,false,385,294,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless2.txt,0
+"Love Story",Fearless,3,false,378,235,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless3.txt,0
+"Hey Stephen",Fearless,4,false,408,254,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless4.txt,0
+"White Horse",Fearless,5,false,304,234,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless5.txt,0
+"You Belong With Me",Fearless,6,false,396,231,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless6.txt,0
+"Breathe",Fearless,7,false,364,263,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless7.txt,0
+"Tell Me Why",Fearless,8,false,348,200,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless8.txt,0
+"You’re Not Sorry",Fearless,9,false,312,261,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless9.txt,0
+"The Way I Loved You",Fearless,10,false,339,243,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless10.txt,0
+"Forever & Always",Fearless,11,false,405,225,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless11.txt,0
+"The Best Day",Fearless,12,false,348,245,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless12.txt,0
+"Change",Fearless,13,false,270,279,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless13.txt,0
+"Jump Then Fall",Fearless,14,false,382,237,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless14.txt,0
+"Untouchable",Fearless,15,false,408,312,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless15.txt,0
+"Come In With The Rain",Fearless,16,false,229,237,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless16.txt,0
+"Superstar",Fearless,17,false,270,263,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless17.txt,0
+"The Other Side of the Door",Fearless,18,false,373,238,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless18.txt,0
+"Today Was a Fairytale",Fearless,19,false,344,241,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless19.txt,0
+"You All Over Me ft. Maren Morris",Fearless,20,false,324,220,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless20.txt,0
+"Mr. Perfectly Fine",Fearless,21,false,412,277,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless21.txt,0
+"We Were Happy",Fearless,22,false,248,244,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless22.txt,0
+"That’s When ft. Keith Urban",Fearless,23,false,342,189,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless23.txt,0
+"Don’t You",Fearless,24,false,242,208,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless24.txt,0
+"Bye Bye Baby",Fearless,25,false,343,242,C:\Users\Ariel\Desktop\ProjectTaylor\Fearless\Fearless25.txt,0
+"Mine",Speak Now,1,false,401,231,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow1.txt,0
+"Sparks Fly",Speak Now,2,false,349,261,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow2.txt,0
+"Back To December",Speak Now,3,false,424,294,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow3.txt,0
+"Speak Now",Speak Now,4,false,432,242,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow4.txt,0
+"Dear John",Speak Now,5,false,376,405,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow5.txt,0
+"Mean",Speak Now,6,false,405,238,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow6.txt,0
+"The Story Of Us",Speak Now,7,false,451,267,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow7.txt,0
+"Never Grow Up",Speak Now,8,false,444,292,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow8.txt,0
+"Enchanted",Speak Now,9,false,389,353,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow9.txt,0
+"Better Than Revenge",Speak Now,10,false,532,220,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow10.txt,0
+"Innocent",Speak Now,11,false,317,301,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow11.txt,0
+"Haunted",Speak Now,12,false,322,245,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow12.txt,0
+"Last Kiss",Speak Now,13,false,406,369,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow13.txt,0
+"Long Live",Speak Now,14,false,441,317,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow14.txt,0
+"Ours",Speak Now,15,false,297,235,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow15.txt,0
+"Superman",Speak Now,16,false,377,274,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow16.txt,0
+"Electric Touch ft. Fall Out Boy",Speak Now,17,false,359,266,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow17.txt,0
+"When Emma Falls in Love",Speak Now,18,false,382,252,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow18.txt,0
+"I Can See You",Speak Now,19,false,410,273,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow19.txt,0
+"Castles Crumbling ft. Hayley Williams",Speak Now,20,false,353,306,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow20.txt,0
+"Foolish One",Speak Now,21,false,461,311,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow21.txt,0
+"Timeless",Speak Now,22,false,525,321,C:\Users\Ariel\Desktop\ProjectTaylor\SpeakNow\SpeakNow22.txt,0
+"State of Grace",Red,1,false,268,295,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red1.txt,0
+"Red",Red,2,false,325,223,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red2.txt,0
+"Treacherous",Red,3,false,260,242,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red3.txt,0
+"I Knew You Were Trouble",Red,4,false,402,219,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red4.txt,0
+"All Too Well",Red,5,false,465,329,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red5.txt,0
+"22",Red,6,false,407,230,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red6.txt,0
+"I Almost Do",Red,7,false,276,244,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red7.txt,0
+"We Are Never Ever Getting Back Together",Red,8,false,378,193,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red8.txt,0
+"Stay Stay Stay",Red,9,false,330,205,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red9.txt,0
+"The Last Time",Red,10,false,450,299,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red10.txt,0
+"Holy Ground",Red,11,false,280,202,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red11.txt,0
+"Sad Beautiful Tragic",Red,12,false,188,284,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red12.txt,0
+"The Lucky One",Red,13,false,338,240,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red13.txt,0
+"Everything Has Changed ft. Ed Sheeran",Red,14,false,478,245,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red14.txt,0
+"Starlight",Red,15,false,340,220,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red15.txt,0
+"Begin Again",Red,16,false,336,238,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red16.txt,0
+"The Moment I Knew",Red,17,false,342,285,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red17.txt,0
+"Come Back...Be Here",Red,18,false,323,223,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red18.txt,0
+"Girl At Home",Red,19,false,395,220,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red19.txt,0
+"Ronan",Red,20,false,307,264,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red20.txt,0
+"Better Man",Red,21,false,488,297,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red21.txt,0
+"Nothing New ft. Phoebe Bridgers",Red,22,false,387,258,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red22.txt,0
+"Babe",Red,23,false,373,224,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red23.txt,0
+"Message In A Bottle",Red,24,false,396,225,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red24.txt,0
+"I Bet You Think About Me ft. Chris Stapleton",Red,25,true,476,285,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red25.txt,1
+"Forever Winter",Red,26,false,354,263,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red26.txt,0
+"Run ft. Ed Sheeran",Red,27,false,394,240,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red27.txt,0
+"The Very First Night",Red,28,false,401,200,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red28.txt,0
+"All Too Well (10 Minute Version)",Red,29,true,968,613,C:\Users\Ariel\Desktop\ProjectTaylor\Red\Red29.txt,0
+"Welcome to New York",1989,1,false,347,212,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-1.txt,0
+"Blank Space",1989,2,false,519,231,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-2.txt,0
+"Style",1989,3,false,394,231,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-3.txt,0
+"Out Of The Woods",1989,4,false,667,235,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-4.txt,0
+"All You Had To Do Was Stay",1989,5,false,466,193,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-5.txt,0
+"Shake It Off",1989,6,false,557,219,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-6.txt,0
+"I Wish You Would",1989,7,false,592,207,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-7.txt,0
+"Bad Blood (Remix) ft. Kendrick Lamar",1989,8,false,535,199,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-8.txt,0
+"Wildest Dreams",1989,9,false,356,220,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-9.txt,0
+"How You Get The Girl",1989,10,false,408,247,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-10.txt,0
+"This Love",1989,11,false,385,250,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-11.txt,0
+"I Know Places",1989,12,false,338,195,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-12.txt,1
+"Clean",1989,13,false,335,245,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-13.txt,0
+"Wonderland",1989,14,false,473,267,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-14.txt,0
+"You Are in Love",1989,15,false,415,267,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-15.txt,0
+"New Romantics",1989,16,false,504,230,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-16.txt,0
+"Slut!",1989,17,false,338,180,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-17.txt,0
+"Say Don’t Go",1989,18,false,442,279,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-18.txt,0
+"Now That We Don’t Talk",1989,19,false,282,146,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-19.txt,0
+"Suburban Legends",1989,20,false,305,171,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-20.txt,0
+"Is It Over Now?",1989,21,false,401,229,C:\Users\Ariel\Desktop\ProjectTaylor\1989\1989-21.txt,0
+"...Ready For it?",Reputation,1,false,446,208,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation1.txt,0
+"End Game ft. Ed Sheeran and Future",Reputation,2,false,737,244,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation2.txt,0
+"I Did Something Bad",Reputation,3,false,478,238,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation3.txt,0
+"Don’t Blame Me",Reputation,4,false,485,236,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation4.txt,0
+"Delicate",Reputation,5,false,489,232,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation5.txt,1
+"Look What You Made Me Do",Reputation,6,false,557,211,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation6.txt,0
+"So It Goes...",Reputation,7,false,387,227,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation7.txt,0
+"Gorgeous",Reputation,8,false,438,209,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation8.txt,0
+"Getaway Car",Reputation,9,false,550,233,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation9.txt,0
+"King of My Heart",Reputation,10,false,466,214,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation10.txt,0
+"Dancing With Our Hands Tied",Reputation,11,false,434,211,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation11.txt,0
+"Dress",Reputation,12,false,491,230,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation12.txt,0
+"This Is Why We Can’t Have Nice Things",Reputation,13,false,399,207,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation13.txt,0
+"Call It What You Want",Reputation,14,false,520,203,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation14.txt,0
+"New Year’s Day",Reputation,15,false,369,235,C:\Users\Ariel\Desktop\ProjectTaylor\Reputation\Reputation15.txt,0
+"I Forgot That You Existed",Lover,1,false,293,170,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover1.txt,0
+"Cruel Summer",Lover,2,false,441,178,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover2.txt,0
+"Lover",Lover,3,false,258,221,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover3.txt,0
+"The Man",Lover,4,false,430,190,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover4.txt,0
+"The Archer",Lover,5,false,292,211,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover5.txt,0
+"I Think He Knows",Lover,6,false,394,173,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover6.txt,0
+"Miss Americana & The Heartbreak Prince",Lover,7,false,513,234,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover7.txt,0
+"Paper Rings",Lover,8,false,483,222,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover8.txt,0
+"Cornelia Street",Lover,9,false,386,287,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover9.txt,0
+"Death By A Thousand Cuts",Lover,10,false,430,198,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover10.txt,0
+"London Boy",Lover,11,false,443,190,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover11.txt,0
+"Soon You’ll Get Better",Lover,12,false,256,201,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover12.txt,0
+"False God",Lover,13,false,321,200,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover13.txt,0
+"You Need To Calm Down",Lover,14,false,344,171,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover14.txt,0
+"Afterglow",Lover,15,false,385,223,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover15.txt,0
+"ME! ft. Brendon Urie",Lover,16,false,488,193,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover16.txt,0
+"It’s Nice To Have A Friend",Lover,17,false,156,150,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover17.txt,0
+"Daylight",Lover,18,false,482,293,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover18.txt,0
+"All Of The Girls You Loved Before",Lover,19,false,321,221,C:\Users\Ariel\Desktop\ProjectTaylor\Lover\Lover19.txt,0
+"the 1",Folklore,1,true,307,210,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore1.txt,2
+"cardigan",Folklore,2,false,336,239,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore2.txt,0
+"the last great american dynasty",Folklore,3,true,329,231,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore3.txt,1
+"exile",Folklore,4,false,480,285,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore4.txt,0
+"​my tears ricochet",Folklore,5,false,310,255,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore5.txt,0
+"mirrorball",Folklore,6,false,258,208,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore6.txt,0
+"seven",Folklore,7,false,218,208,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore7.txt,0
+"august",Folklore,8,false,397,261,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore8.txt,0
+"​this is me trying",Folklore,9,false,260,195,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore9.txt,0
+"​illicit affairs",Folklore,10,false,239,190,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore10.txt,1
+"​invisible string",Folklore,11,false,298,252,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore11.txt,0
+"​mad woman",Folklore,12,true,314,237,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore12.txt,0
+"epiphany",Folklore,13,false,183,289,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore13.txt,0
+"betty",Folklore,14,true,455,294,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore14.txt,2
+"peace",Folklore,15,true,287,234,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore15.txt,1
+"hoax",Folklore,16,false,242,220,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore16.txt,0
+"​the lakes",Folklore,17,false,232,211,C:\Users\Ariel\Desktop\ProjectTaylor\Folklore\Folklore17.txt,0
+"willow",Evermore,1,false,408,214,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore1.txt,0
+"​champagne problems",Evermore,2,true,286,244,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore2.txt,0
+"gold rush",Evermore,3,true,339,185,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore3.txt,2
+"​’tis the damn season",Evermore,4,false,408,229,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore4.txt,4
+"​tolerate it",Evermore,5,true,314,245,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore5.txt,2
+"​no body, no crime ft. HAIM",Evermore,6,false,397,215,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore6.txt,0
+"​happiness",Evermore,7,true,431,315,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore7.txt,1
+"​dorothea",Evermore,8,false,244,225,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore8.txt,0
+"​coney island",Evermore,9,false,424,275,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore9.txt,0
+"ivy",Evermore,10,true,368,260,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore10.txt,0
+"​cowboy like me",Evermore,11,true,342,275,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore11.txt,1
+"​l​ong story short",Evermore,12,false,406,215,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore12.txt,0
+"marjorie",Evermore,13,false,320,257,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore13.txt,0
+"​closure",Evermore,14,false,230,180,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore14.txt,0
+"evermore",Evermore,15,false,362,304,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore15.txt,0
+"​r​ight where you left me",Evermore,16,false,407,245,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore16.txt,0
+"​it’s time to go",Evermore,17,false,377,254,C:\Users\Ariel\Desktop\ProjectTaylor\Evermore\Evermore17.txt,0
+"Lavender Haze",Midnights,1,true,301,202,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights1.txt,10
+"Maroon",Midnights,2,true,350,218,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights2.txt,1
+"Anti-Hero",Midnights,3,false,333,200,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights3.txt,0
+"Snow On The Beach ft. Lana Del Ray",Midnights,4,true,451,256,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights4.txt,0
+"You’re On Your Own, Kid",Midnights,5,false,297,194,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights5.txt,0
+"Midnight Rain",Midnights,6,false,283,174,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights6.txt,0
+"Question...?",Midnights,7,true,432,210,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights7.txt,0
+"Vigilante Shit",Midnights,8,true,259,164,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights8.txt,1
+"Bejeweled",Midnights,9,false,426,194,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights9.txt,0
+"Labyrinth",Midnights,10,false,277,247,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights10.txt,0
+"Karma",Midnights,11,true,383,204,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights11.txt,1
+"Sweet Nothing",Midnights,12,false,269,188,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights12.txt,0
+"Mastermind",Midnights,13,false,336,191,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights13.txt,0
+"The Great War",Midnights,14,false,346,240,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights14.txt,0
+"Bigger Than The Whole Sky",Midnights,15,false,249,218,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights15.txt,0
+"Paris",Midnights,16,false,310,196,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights16.txt,0
+"High Infidelity",Midnights,17,false,375,231,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights17.txt,0
+"Glitch",Midnights,18,false,233,148,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights18.txt,0
+"Would’ve, Could’ve, Should’ve",Midnights,19,false,500,260,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights19.txt,3
+"Dear Reader",Midnights,20,false,266,225,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights20.txt,0
+"Hits Different",Midnights,21,false,458,234,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights21.txt,4
+"You’re Losing Me",Midnights,22,false,396,281,C:\Users\Ariel\Desktop\ProjectTaylor\Midnights\Midnights22.txt,0
+"Fortnight ft. Post Malone",The Tortured Poets Department,1,false,352,228,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD1.txt,0
+"The Tortured Poets Department",The Tortured Poets Department,2,true,412,293,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD2.txt,0
+"My Boy Only Breaks His Favorite Toys",The Tortured Poets Department,3,false,291,203,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD3.txt,0
+"Down Bad",The Tortured Poets Department,4,true,472,261,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD4.txt,17
+"So Long, London",The Tortured Poets Department,5,false,376,262,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD5.txt,0
+"But Daddy I Love Him",The Tortured Poets Department,6,true,563,340,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD6.txt,1
+"Fresh Out The Slammer",The Tortured Poets Department,7,false,273,210,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD7.txt,0
+"Florida!!! ft. Florence + The Machine",The Tortured Poets Department,8,true,470,215,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD8.txt,3
+"Guilty as Sin?",The Tortured Poets Department,9,false,353,254,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD9.txt,0
+"Who’s Afraid of Little Old Me?",The Tortured Poets Department,10,false,442,334,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD10.txt,0
+"I Can Fix Him (No Really I Can)",The Tortured Poets Department,11,false,235,156,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD11.txt,0
+"loml",The Tortured Poets Department,12,true,362,277,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD12.txt,0
+"I Can Do It With A Broken Heart",The Tortured Poets Department,13,true,395,218,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD13.txt,2
+"The Smallest Man Who Ever Lived",The Tortured Poets Department,14,true,311,245,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD14.txt,1
+"The Alchemy",The Tortured Poets Department,15,false,361,196,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD15.txt,0
+"Clara Bow",The Tortured Poets Department,16,false,248,216,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD16.txt,0
+"The Black Dog",The Tortured Poets Department,17,true,301,238,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD17.txt,0
+"imgonnagetyouback",The Tortured Poets Department,18,false,411,222,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD18.txt,0
+"The Albatross",The Tortured Poets Department,19,false,251,183,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD19.txt,0
+"Chloe or Sam or Sophia or Marcus",The Tortured Poets Department,20,false,317,213,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD20.txt,0
+"How Did It End?",The Tortured Poets Department,21,false,231,238,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD21.txt,0
+"So High School",The Tortured Poets Department,22,false,386,228,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD22.txt,2
+"I Hate It Here",The Tortured Poets Department,23,false,404,243,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD23.txt,0
+"​​thanK you aIMee",The Tortured Poets Department,24,true,410,263,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD24.txt,0
+"I Look in People’s Windows",The Tortured Poets Department,25,false,179,131,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD25.txt,0
+"The Prophecy",The Tortured Poets Department,26,false,354,249,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD26.txt,0
+"Cassandra",The Tortured Poets Department,27,true,363,240,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD27.txt,0
+"Peter",The Tortured Poets Department,28,false,440,283,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD28.txt,0
+"The Bolter",The Tortured Poets Department,29,true,410,238,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD29.txt,0
+"Robin",The Tortured Poets Department,30,false,178,240,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD30.txt,0
+"The Manuscript",The Tortured Poets Department,31,false,240,224,C:\Users\Ariel\Desktop\ProjectTaylor\TTPD\TTPD31.txt,0
+"Safe & Sound ft. The Civil Wars",Specials,1,false,209,239,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special1.txt,0
+"Eyes Open",Specials,2,false,255,243,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special2.txt,0
+"Crazier",Specials,3,false,218,192,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special3.txt,0
+"I Don’t Wanna Live Forever",Specials,4,false,418,247,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special4.txt,0
+"Carolina",Specials,5,false,233,264,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special5.txt,0
+"Renegade",Specials,6,true,485,254,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special6.txt,3
+"Christmas Tree Farm",Specials,7,false,304,228,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special7.txt,0
+"Beautiful Ghosts",Specials,8,false,294,261,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special8.txt,0
+"Only The Young",Specials,9,false,297,157,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special9.txt,0
+"The Joker And The Queen",Specials,10,false,214,185,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special10.txt,0
+"Sweeter Than Fiction",Specials,11,false,473,237,C:\Users\Ariel\Desktop\ProjectTaylor\Specials\Special11.txt,0
