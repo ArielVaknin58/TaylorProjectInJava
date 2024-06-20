@@ -59,7 +59,7 @@ public class Main
                     Artist ChosenArtist = ArtistsArray[ArtistPick];
                     System.out.println("Pick one of the options :\n0) to get a random "+ArtistsArray[ArtistPick].getArtistName()+" song\n1) to look up a word \n2) to get Songs/Albums length information \n3) to get information about amount of words");
                     System.out.println("4) get information about explicit songs");
-                    System.out.println("5) **If running the program in a new PC for the first time**");
+                    System.out.println("5) **Under construction**");
                     System.out.println("6) Compare between artists ");
                     System.out.println("7) Get your birthday song !");
                     System.out.println("8) Create a CVS file for "+ArtistsArray[ArtistPick].getArtistName()+"'s discography");
@@ -345,25 +345,6 @@ public class Main
                         }
 
                     }
-                    else if(MainPick == 5)//The user chose to change the files path
-                    {
-                        String bloop;
-                        System.out.println("**How to start**");
-                        System.out.println("1) Copy and paste the library (album folders with all the songs + Album'sReadMe file ) to a desired destination ");
-                        System.out.println("PRESS ANY KEY WHEN DONE");
-                        bloop = Keyboard.next();
-                        System.out.println("2) Use the *local* path of the Album'sReadMe as a parameter to the program (Even though it contains old paths), right click on the file and choose \"copy as path\"");
-                        System.out.println("PRESS ANY KEY WHEN DONE");
-                        bloop = Keyboard.next();
-                        System.out.println("3) Provide the copied folder path without quotes (try to avoid hebrew characters !) ");
-                        System.out.print("----->");
-                        bloop = Keyboard.next();
-                        File newfile = new File(args[ArtistPick]);
-                        String NewMainPath = ChangeProgramPath(bloop, newfile, ArtistPick);
-                        System.out.println("***Files successfully created !***");
-                        System.out.println("Please close and re-open the program !");
-
-                    }
                     else if(MainPick == 6)//The user chose to compare between two artists
                     {
                         System.out.println("Please choose an aspect to compare :\n0) Every aspect \n1) Number of appearances of a word \n2) Length information \n3) Number of words");
@@ -557,57 +538,55 @@ public class Main
         return DiscographyArray;
     }
 
-    public static String ChangeProgramPath(String NewPath,File OriginalFile,int ArtistNum)
-    {//Words only for taylor currently
-        try {
-            Scanner OriginalReader = new Scanner(OriginalFile);
-            BufferedWriter writer = new BufferedWriter(new FileWriter(NewPath+"\\AlbumsReadMe's.txt"));
-            String temp = OriginalReader.nextLine();
-            temp = temp.substring(15);
-            int NumOfAlbums = Integer.parseInt(temp);
-            writer.write("num of albums : "+NumOfAlbums+"\n");
-            for(int i = 1 ; i <= NumOfAlbums ; i++)
-            {
-                if(i != 3)
-                    writer.write(NewPath+"\\"+Album.IntToAlbum(i,ArtistNum)+"\\"+Album.IntToAlbum(i,ArtistNum)+"ReadMe.txt\n");
-                else
-                    writer.write(NewPath+"\\SpeakNow\\SpeakNowReadMe.txt\n");
-            }
-            writer.close();
-            OriginalReader.close();
-            Scanner OriginalScanner = new Scanner(OriginalFile);
-            File CopyFile = new File(NewPath+"\\AlbumsReadMe's.txt");
-            Scanner CopyScanner = new Scanner(CopyFile);
-            temp = OriginalScanner.nextLine();
-            temp = CopyScanner.nextLine();
-            for(int i = 1 ; i <= NumOfAlbums ; i++)
-            {
-                String newTemp = CopyScanner.nextLine();
-                BufferedWriter Writer = new BufferedWriter(new FileWriter(newTemp));
-                newTemp = OriginalScanner.nextLine();
-                File albumFile = new File(newTemp);
-                Scanner AlbumTracksReader = new Scanner(albumFile);
-                temp = AlbumTracksReader.nextLine();
-                temp = temp.substring(14);
-                int NumOfTracks = Integer.parseInt(temp);
-                Writer.write("num of songs : "+NumOfTracks+"\n");
-                for(int j = 1 ; j <= NumOfTracks ; j++)
-                {
-                    if(i == 3)
-                        Writer.write(NewPath+"\\SpeakNow\\SpeakNow"+j+".txt\n");
-                    else if (i == 5)
-                        Writer.write(NewPath+"\\1989\\1989-"+j+".txt\n");
-                    else
-                        Writer.write(NewPath+"\\"+Album.IntToAlbum(i,ArtistNum)+"\\"+Album.IntToAlbum(i,ArtistNum)+j+".txt\n");
-                }
-                Writer.close();
-                AlbumTracksReader.close();
-            }
-        }catch (IOException e) {System.err.println("Error writing to the file: " + e.getMessage());}
+    //**
+   // public static String ChangeProgramPath(String NewPath,File OriginalFile,int ArtistNum) {//Words only for taylor currently
+    //    try {
+    //
+   //         Scanner OriginalReader = new Scanner(OriginalFile);
+   //         BufferedWriter writer = new BufferedWriter(new FileWriter(NewPath + "\\AlbumsReadMe's.txt"));
+   //         String temp = OriginalReader.nextLine();
+   //         temp = temp.substring(15);
+   //         int NumOfAlbums = Integer.parseInt(temp);
+   //         writer.write("num of albums : " + NumOfAlbums + "\n");
+   //         for (int i = 1; i <= NumOfAlbums; i++) {
+   //             if (i != 3)
+   //                 writer.write(NewPath + "\\" + Album.IntToAlbum(i, ArtistNum) + "\\" + Album.IntToAlbum(i, ArtistNum) + "ReadMe.txt\n");
+    //            else
+   //                 writer.write(NewPath + "\\SpeakNow\\SpeakNowReadMe.txt\n");
+   //         }
+   //         writer.close();
+   //         OriginalReader.close();//        Scanner OriginalScanner = new Scanner(OriginalFile);
+   //         File CopyFile = new File(NewPath + "\\AlbumsReadMe's.txt");
+   //         Scanner CopyScanner = new Scanner(CopyFile);
+   //         temp = OriginalScanner.nextLine();
+   //         temp = CopyScanner.nextLine();
+   //         for (int i = 1; i <= NumOfAlbums; i++) {
+   //             String newTemp = CopyScanner.nextLine();
+   //             BufferedWriter Writer = new BufferedWriter(new FileWriter(newTemp));
+   //             newTemp = OriginalScanner.nextLine();
+   //             File albumFile = new File(newTemp);
+   //             Scanner AlbumTracksReader = new Scanner(albumFile);
+   //             temp = AlbumTracksReader.nextLine();
+   //             temp = temp.substring(14);
+   //             int NumOfTracks = Integer.parseInt(temp);
+   //             Writer.write("num of songs : " + NumOfTracks + "\n");
+   //             for (int j = 1; j <= NumOfTracks; j++) {
+   //                 if (i == 3)
+   //                     Writer.write(NewPath + "\\SpeakNow\\SpeakNow" + j + ".txt\n");
+   //                 else if (i == 5)
+   //                     Writer.write(NewPath + "\\1989\\1989-" + j + ".txt\n");
+   //                 else
+   //                     Writer.write(NewPath + "\\" + Album.IntToAlbum(i, ArtistNum) + "\\" + Album.IntToAlbum(i, ArtistNum) + j + ".txt\n");
+   //             }
+   //             Writer.close();
+   //             AlbumTracksReader.close();
+   //         }
+   //     } catch (IOException e) {
+   //         System.err.println("Error writing to the file: " + e.getMessage());
+  //      }
 
-        return (NewPath+"\\NewMainReadMe.txt");
-    }
-
+     //   return (NewPath + "\\NewMainReadMe.txt");
+   // }
 
     public static void PrintWelcomeBanner()// This function prints the opening welcome banner
     {

@@ -1,0 +1,1 @@
+java -jar ProjectTaylor.jar "C:\Users\Public\Documents\ArtistsReadMe.txt"

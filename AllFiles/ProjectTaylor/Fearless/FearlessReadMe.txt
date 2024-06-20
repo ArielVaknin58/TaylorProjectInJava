@@ -1,0 +1,26 @@
+num of songs: 25
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless1.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless2.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless3.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless4.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless5.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless6.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless7.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless8.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless9.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless10.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless11.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless12.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless13.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless14.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless15.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless16.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless17.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless18.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless19.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless20.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless21.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless22.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless23.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless24.txt
+C:\Users\Public\Documents\ProjectTaylor\Fearless\Fearless25.txt
