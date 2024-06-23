@@ -67,7 +67,7 @@ public class Artist {
 
     public void CountExplicitsInDiscographySummary()//This method creates a summary file with details about explicit Taylor songs.
     {
-        String FileName = "Discography Explicits Summary - "+this.getArtistName()+".txt";
+        String FileName = Main.getOutputPath() +"Discography Explicits Summary - "+this.getArtistName()+".txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
         {
             writer.write("Summary file for Explicit songs in "+this.getArtistName()+"'s discography.\n");
@@ -120,7 +120,7 @@ public class Artist {
         Song TotalMaxSong = this.getDiscography()[1].GetSongsArray()[1];//holds the longest song on Taylor's discography
         Song TotalMinSong = this.getDiscography()[1].GetSongsArray()[1];//holds the shortest song on Taylor's discography
 
-        String FileName = "Discography Duration Summary -"+this.getArtistName()+".txt";
+        String FileName =  Main.getOutputPath() + "Discography Duration Summary -"+this.getArtistName()+".txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
         {
             writer.write("Summary Duration for "+this.getArtistName()+"'s discography in MM:SS format\n\n");
@@ -245,7 +245,7 @@ public class Artist {
 
     public void CountObscenitiesInDiscographySummary()//This method counts the obscenities in Taylor's discography and produces a file with the details.
     {
-        String FileName = "Obscenities - Full Summary - "+this.getArtistName()+".txt";
+        String FileName = Main.getOutputPath() +"Obscenities - Full Summary - "+this.getArtistName()+".txt";
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
         {
             writer.write("Summary file for obscenities in "+this.getArtistName()+"'s discography.\n");
@@ -288,7 +288,7 @@ public class Artist {
 
     public void WordCounterInDiscographySummaryFile(String word)//This method counts the appearances of a given word in Taylor's discography and produces a file with the details.
     {
-        String FileName = word + " - Full Summary/"+this.getArtistName()+".txt";
+        String FileName = Main.getOutputPath() + word + " - Full Summary "+this.getArtistName()+".txt";
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
         {
             writer.write("Summary file for the word \""+word+"\".\n");
@@ -310,6 +310,7 @@ public class Artist {
             writer.write("***** In Total, The word appears "+TotalCounter +" times in "+this.getArtistName()+"'s Entire Discography *****");
         }
         catch (IOException e) {System.err.println("Error writing to the file: " + e.getMessage());}
+        System.out.println("*****Summary file has been created successfully !*****");
     }
 
     public int NumOfWordsInDiscography() throws IOException
@@ -328,7 +329,7 @@ public class Artist {
         Song TotalMinSong = this.getDiscography()[1].GetSongsArray()[1];
         int TotalMaxWords = 0;
         int TotalMinWords = 1000;
-        String FileName = "Word counter Full Summary " +this.getArtistName() + ".txt";
+        String FileName = Main.getOutputPath() + "Word counter Full Summary " +this.getArtistName() + ".txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FileName))) {
             writer.write("Summary of the number of words in " + this.getArtistName() + "'s Discography\n\n");
             for (int i = 1; i <= this.getNumOfAlbums(); i++) {
@@ -393,7 +394,7 @@ public class Artist {
         }
         else if(FileChoice == 1)//The user chose to create a summary file.
         {
-            String FileName = "Song Average Full Summary - "+this.getArtistName()+".txt";
+            String FileName = Main.getOutputPath()+ "Song Average Full Summary - "+this.getArtistName()+".txt";
             try(BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
             {
                 writer.write("Summary file for song averages in "+this.getArtistName()+"'s discography\n\n");

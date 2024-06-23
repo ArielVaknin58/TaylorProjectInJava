@@ -135,7 +135,7 @@ public class Album {
         }
         else if(choice == 1)//If the user chooses to create a summary file
         {
-            String FileName = this.GetAlbumName()+" Duration Summary -"+this.GetArtistName()+".txt";
+            String FileName = Main.getOutputPath() + this.GetAlbumName()+" Duration Summary -"+this.GetArtistName()+".txt";
             BufferedWriter writer = new BufferedWriter(new FileWriter(FileName));
             writer.write("Summary for the "+this.GetAlbumName()+" album - Duration in MM:SS format\n");
 
@@ -170,7 +170,7 @@ public class Album {
 
     public void WordCounterInAlbumSummaryFile(String word) throws IOException//This method counts the appearances of a given word in a given album and produces a file with the details.
     {
-        String NewFileName = word+" in "+this.GetAlbumName()+" Summary - "+this.GetArtistName()+".txt";
+        String NewFileName = Main.getOutputPath() + word+" in "+this.GetAlbumName()+" Summary - "+this.GetArtistName()+".txt";
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(NewFileName));
             writer.write("Summary file for the word "+word+" in the "+this.GetAlbumName()+" album.\n");
@@ -184,6 +184,7 @@ public class Album {
             }
             writer.write("\n*** In Total, the word \""+word+"\" appears "+AlbumCounter+" times on the album \""+this.GetAlbumName()+"\".");
             writer.close();
+        System.out.println("*** Summary file has been created ! ***");
     }
     public ArrayList<Song> CountExplicitsInAlbum()//This method creates and returns an ArrayList of the explicit songs in a given album.
     {
@@ -204,7 +205,7 @@ public class Album {
 
     public void CountObscenitiesInAlbumSummary() throws IOException//This method counts the number of obscenities in a given album and produces a file with the details.
     {
-        String FileName = this.GetAlbumName()+" Obscenities Summary - "+this.GetArtistName()+".txt";
+        String FileName = Main.getOutputPath() + this.GetAlbumName()+" Obscenities Summary - "+this.GetArtistName()+".txt";
 
         BufferedWriter writer = new BufferedWriter(new FileWriter(FileName));
         writer.write("Summary file for the number of obscenities in the "+this.GetAlbumName()+" album.\n");
@@ -220,7 +221,7 @@ public class Album {
     }
     public void CountExplicitsInAlbumSummary() throws IOException//This method counts the number of explicit songs in a given album and creates a file with the details.
     {
-        String FileName = this.GetAlbumName()+" Explicits Summary - "+this.GetArtistName()+".txt";
+        String FileName = Main.getOutputPath() + this.GetAlbumName()+" Explicits Summary - "+this.GetArtistName()+".txt";
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(FileName));
             writer.write("Summary file for Explicit songs in the "+this.GetAlbumName()+" album.\n");
@@ -237,6 +238,8 @@ public class Album {
             }
             writer.write("\n***In Summary, the "+this.GetAlbumName()+" album has "+counter+" explicit songs in it.");
             writer.close();
+        System.out.println("*** Summary file has been created ! ***");
+
     }
     public int AvgSongLengthInAlbum()//This function returns the average song length in a given album in seconds.
     {
@@ -262,7 +265,7 @@ public class Album {
 
     public static void NumOfWordsInAlbumSummary(Album album) throws IOException//This method counts the number of words in a given album and produces a file with the details.
     {
-        String FileName = album.GetAlbumName()+" - Word counter - "+album.GetArtistName()+".txt";
+        String FileName = Main.getOutputPath() + album.GetAlbumName()+" - Word counter - "+album.GetArtistName()+".txt";
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(FileName));
             writer.write("Summary for the number of words in the "+album.GetAlbumName()+" album\n\n");

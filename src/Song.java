@@ -138,33 +138,7 @@ public class Song {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return wordCount;
     }
-    /*
-    public static void StaticLexicographicalRichnessInFile(String path)
-    {
-        Map<String, Integer> wordCount = new HashMap<>();
-        double wordCounter = 0;
-        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] words = line.split("\\s+"); // split by whitespace
-                for (String word : words) {
-                    word = word.replaceAll("[^a-zA-Z]", "").toLowerCase(); // remove non-alphabetic characters and convert to lowercase
-                    wordCounter++;
-                    if (!word.isEmpty()) {
-                        wordCount.put(word, wordCount.getOrDefault(word, 0) + 1); // increment count
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        double lexi_richness = (double)wordCount.size() / wordCounter;
-        System.out.println("the lexi richness of the text is : " + lexi_richness);
-    }
-*/
 
 }

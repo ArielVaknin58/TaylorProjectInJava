@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 /*  TO DO LIST
 1)  Implement a GUI
 2)
-3)  ** Comparisons between the artists **
+3)
 4)
 5)
 6)
@@ -20,6 +20,9 @@ import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 public class Main
 {
     private static int NumberOfArtists;
+    private static String OutputPath;
+    public static String getOutputPath() {return OutputPath;}
+    public static void setOutputPath(String outputPath) {OutputPath = outputPath;}
     public static int getNumberOfArtists() {return NumberOfArtists;}
     public static void setNumberOfArtists(int numberOfArtists) {NumberOfArtists = numberOfArtists;}
     public static void main(String[] args)
@@ -30,6 +33,7 @@ public class Main
         try(Scanner Keyboard = new Scanner(System.in))
         {
             File file = new File(args[0]);
+            setOutputPath(args[1]);
             Scanner Reader = new Scanner(file);
             String temp = Reader.nextLine();
             temp = temp.substring(16);
@@ -72,7 +76,6 @@ public class Main
                         System.out.print("----->");
                         String word = Keyboard.next();
 
-                        //Scanner FileReader = new Scanner(args[0]);
                         System.out.println("In which album would you like to search ? choose 1-" + ArtistsArray[ArtistPick].getNumOfAlbums() + " or 0 for the entire discography :");
                         ChosenArtist.PrintAlbums();
                         System.out.print("----->");
@@ -83,10 +86,8 @@ public class Main
                             System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
                             int FileChoice = Keyboard.nextInt();
                             if(FileChoice == 1)//The user chose to create a summary file.
-                            {
                                 ChosenArtist.WordCounterInDiscographySummaryFile(word);
-                                System.out.println("*****Summary file has been created successfully !*****");
-                            }
+
                             else if(FileChoice == 0)//The user chose to not create a summary file.
                             {
                                 counter = ChosenArtist.WordCounterInDiscography(word);
@@ -95,29 +96,27 @@ public class Main
                         }
                         else// The user picked a specific album
                         {
-                            int FileChoice;
-                            System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
+                            System.out.println("In which song would you like to search ? pick 1-" + ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs() + " or 0 for the entire album :");
+                            ChosenArtist.PrintAlbumsTracks(AlbumPick);
                             System.out.print("----->");
-                            FileChoice = Keyboard.nextInt();
-                            InputCheck(0,1,Keyboard,FileChoice);
-                            if(FileChoice == 1)//If the user wants to create a file
+                            int SongChoice = Keyboard.nextInt();
+                            InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),Keyboard,SongChoice);
+                            if (SongChoice > 0) //The user picked a specific song
                             {
-                                ArtistsArray[ArtistPick].getDiscography()[AlbumPick].WordCounterInAlbumSummaryFile(word);
-                                System.out.println("*** Summary file has been created ! ***");
-                            }
-                            else //if the user doesn't want to create a file
-                            {
-                                System.out.println("In which song would you like to search ? pick 1-" + ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs() + " or 0 for the entire album :");
-                                ChosenArtist.PrintAlbumsTracks(AlbumPick);
-                                System.out.print("----->");
-                                int SongChoice = Keyboard.nextInt();
-                                InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),Keyboard,SongChoice);
-                                if (SongChoice > 0) //The user picked a specific song
-                                {
-                                    counter = ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetSongsArray()[SongChoice].WordCounterInSong(word);
-                                    System.out.println("The word \"" + word + "\" appears " + counter + " times in the song " + ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetSongsArray()[SongChoice].GetSongName() + ".");
+                                counter = ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetSongsArray()[SongChoice].WordCounterInSong(word);
+                                System.out.println("The word \"" + word + "\" appears " + counter + " times in the song " + ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetSongsArray()[SongChoice].GetSongName() + ".");
 
-                                } else if (SongChoice == 0) //The user chose to search in the entire album
+                            }
+                            else if (SongChoice == 0) //The user chose to search in the entire album
+                            {
+                                int FileChoice;
+                                System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
+                                System.out.print("----->");
+                                FileChoice = Keyboard.nextInt();
+                                InputCheck(0,1,Keyboard,FileChoice);
+                                if(FileChoice == 1)//If the user wants to create a file
+                                    ArtistsArray[ArtistPick].getDiscography()[AlbumPick].WordCounterInAlbumSummaryFile(word);
+                                else //if the user doesn't want to create a file
                                 {
                                     int AlbumCounter = ArtistsArray[ArtistPick].getDiscography()[AlbumPick].WordCounterInAlbum(word);
                                     System.out.println("The word \"" +word + "\" appears " + AlbumCounter + " times in the " + ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetAlbumName() + " album.");
@@ -125,7 +124,6 @@ public class Main
                             }
                         }
                         Keyboard.nextLine();
-                        //FileReader.close();
                     }
                     else if(MainPick == 0)// The user chose to get a random taylor song
                     {
@@ -286,10 +284,8 @@ public class Main
                                             System.out.println(i+1+") "+ExplicitSongs.get(i).GetSongName());
                                     }
                                     else if(FileChoice == 1)//The user chooses to create a summary file
-                                    {
                                         ArtistsArray[ArtistPick].getDiscography()[AlbumPick].CountExplicitsInAlbumSummary();
-                                        System.out.println("*** Summary file has been created ! ***");
-                                    }
+
                                 }
                                 else//The user chooses to get information about a specific song.
                                 {
@@ -423,7 +419,7 @@ public class Main
     public static void DiscographyCVSfile(Artist artist)
     {
         Album[] Discography = artist.getDiscography();
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(artist.getArtistName()+"Data.cvs")))
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(Main.getOutputPath()+artist.getArtistName()+"Data.cvs")))
         {
             writer.write("name,album,# in album,is Explicit,num of words,duration in sec,path,num of obscenities\n");
             for(int i = 1; i <= artist.getNumOfAlbums(); i++)
@@ -471,7 +467,7 @@ public class Main
 
     public static void Compare2ArtistsSummary(Artist artist1,Artist artist2)
     {
-        String FileName = artist1.getArtistName()+" and "+artist2.getArtistName()+" Full Comparison.txt";
+        String FileName =  Main.getOutputPath() + artist1.getArtistName()+" and "+artist2.getArtistName()+" Full Comparison.txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
         {
             writer.write("                          Comparison File for "+artist1.getArtistName()+" and "+artist2.getArtistName()+"\n");
@@ -492,7 +488,7 @@ public class Main
 
     public static void Compare2Artists(Artist artist1, Artist artist2) throws Exception
     {
-        System.out.print("              Comparison File for "+artist1.getArtistName()+" and "+artist2.getArtistName()+"\n");
+        System.out.print("              Comparison for "+artist1.getArtistName()+" and "+artist2.getArtistName()+"\n");
         System.out.print("1) Number on albums :\n "+artist1.getArtistName()+" : "+artist1.getNumOfAlbums()+"        "+artist2.getArtistName()+" : "+artist2.getNumOfAlbums()+"\n" );
         System.out.print("2) Number on songs :\n "+artist1.getArtistName()+" : "+artist1.getNumOfSongs()+"        "+artist2.getArtistName()+" : "+artist2.getNumOfSongs()+"\n" );
         System.out.print("3) Number on Explicit songs :\n "+artist1.getArtistName()+" : "+artist1.getNumOfExplicits()+"        "+artist2.getArtistName()+" : "+artist2.getNumOfExplicits()+"\n" );
@@ -538,55 +534,6 @@ public class Main
         return DiscographyArray;
     }
 
-    //**
-   // public static String ChangeProgramPath(String NewPath,File OriginalFile,int ArtistNum) {//Words only for taylor currently
-    //    try {
-    //
-   //         Scanner OriginalReader = new Scanner(OriginalFile);
-   //         BufferedWriter writer = new BufferedWriter(new FileWriter(NewPath + "\\AlbumsReadMe's.txt"));
-   //         String temp = OriginalReader.nextLine();
-   //         temp = temp.substring(15);
-   //         int NumOfAlbums = Integer.parseInt(temp);
-   //         writer.write("num of albums : " + NumOfAlbums + "\n");
-   //         for (int i = 1; i <= NumOfAlbums; i++) {
-   //             if (i != 3)
-   //                 writer.write(NewPath + "\\" + Album.IntToAlbum(i, ArtistNum) + "\\" + Album.IntToAlbum(i, ArtistNum) + "ReadMe.txt\n");
-    //            else
-   //                 writer.write(NewPath + "\\SpeakNow\\SpeakNowReadMe.txt\n");
-   //         }
-   //         writer.close();
-   //         OriginalReader.close();//        Scanner OriginalScanner = new Scanner(OriginalFile);
-   //         File CopyFile = new File(NewPath + "\\AlbumsReadMe's.txt");
-   //         Scanner CopyScanner = new Scanner(CopyFile);
-   //         temp = OriginalScanner.nextLine();
-   //         temp = CopyScanner.nextLine();
-   //         for (int i = 1; i <= NumOfAlbums; i++) {
-   //             String newTemp = CopyScanner.nextLine();
-   //             BufferedWriter Writer = new BufferedWriter(new FileWriter(newTemp));
-   //             newTemp = OriginalScanner.nextLine();
-   //             File albumFile = new File(newTemp);
-   //             Scanner AlbumTracksReader = new Scanner(albumFile);
-   //             temp = AlbumTracksReader.nextLine();
-   //             temp = temp.substring(14);
-   //             int NumOfTracks = Integer.parseInt(temp);
-   //             Writer.write("num of songs : " + NumOfTracks + "\n");
-   //             for (int j = 1; j <= NumOfTracks; j++) {
-   //                 if (i == 3)
-   //                     Writer.write(NewPath + "\\SpeakNow\\SpeakNow" + j + ".txt\n");
-   //                 else if (i == 5)
-   //                     Writer.write(NewPath + "\\1989\\1989-" + j + ".txt\n");
-   //                 else
-   //                     Writer.write(NewPath + "\\" + Album.IntToAlbum(i, ArtistNum) + "\\" + Album.IntToAlbum(i, ArtistNum) + j + ".txt\n");
-   //             }
-   //             Writer.close();
-   //             AlbumTracksReader.close();
-   //         }
-   //     } catch (IOException e) {
-   //         System.err.println("Error writing to the file: " + e.getMessage());
-  //      }
-
-     //   return (NewPath + "\\NewMainReadMe.txt");
-   // }
 
     public static void PrintWelcomeBanner()// This function prints the opening welcome banner
     {
@@ -618,56 +565,5 @@ public class Main
         System.out.print("***************************************************************************************************************\n");
 
     }
-   /* public static void CreateJsonFile(File file)//This method created a JSON type file of the database.
-    {
-        String FileName = "Test JSON file.json";
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter(FileName)))
-        {
-            writer.write("{\n");
-            writer.write("\"Albums\":\n");
-            Scanner reader = new Scanner(file);
-            String temp = reader.nextLine();
-            for(int i = 1 ; i <= DiscographyLength ; i++)
-            {
-                String AlbumPath = reader.nextLine();
-                File albumFile = new File(AlbumPath);
-                Scanner AlbumReader = new Scanner(albumFile);
-                temp = AlbumReader.nextLine();
-                temp = temp.substring(14);
-                int numOfSongs = Integer.parseInt(temp);
-                writer.write("  {\n");
-                writer.write("      \"AlbumName\": \""+Album.IntToAlbum(i)+"\",\n");
-                writer.write("      \"NumOfSongs\": "+numOfSongs+",\n");
-                writer.write("      \"AlbumNumber\": "+i+",\n");
-                writer.write("      \"Path\": \""+AlbumPath+"\",\n");
-                writer.write("      \"SongsArray\": [ \n");
-                for(int j = 1; j <= numOfSongs ; j++)
-                {
-                    String SongPath = AlbumReader.nextLine();
-                    File SongFile = new File(SongPath);
-                    Scanner SongReader = new Scanner(SongFile);
-                    String SongTemp = SongReader.nextLine();
-                    writer.write("              {\n");
-                    writer.write("              \"SongName\": \""+SongTemp+"\",\n");
-                    writer.write("              \"SongPath\": \""+SongPath+"\",\n");
-                    String Duration = SongReader.nextLine();
-                    String minutes = Duration.substring(0,2);
-                    int DurationInSec = (Integer.parseInt(minutes))*60;
-                    String seconds = Duration.substring(3);
-                    DurationInSec += Integer.parseInt(seconds);//calculate the duration of the song
-                    writer.write("              \"DurationInSeconds\": "+DurationInSec+",\n");
-                    writer.write("              },\n\n");
-                    SongReader.close();
-                }
-                writer.write("  ]\n\n       },\n\n");
-                AlbumReader.close();
-            }
-            reader.close();
-        }catch (IOException e) {
-            System.err.println("Error writing to the file: " + e.getMessage());
-        }
-
-    }
-    */
 }
 
