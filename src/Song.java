@@ -88,7 +88,6 @@ public class Song {
         File SongFile = new File(this.GetSongPath());
         int ObscenitiesCounter  = 0;
 
-        @SuppressWarnings("UnusedAssignment")
         Scanner SongReader = new Scanner(SongFile);
         String temp = SongReader.nextLine();//reads the song's name
         temp = SongReader.nextLine();//reads the song's duration

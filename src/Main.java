@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 
 /*  TO DO LIST
 1)  Implement a GUI
-2)
+2)  Add sounds
 3)
 4)
 5)
@@ -21,16 +21,22 @@ public class Main
 {
     private static int NumberOfArtists;
     private static String OutputPath;
+    private static final Scanner Keyboard = new Scanner(System.in);
+
+
+    public static Scanner getKeyboard() {return Keyboard;}
     public static String getOutputPath() {return OutputPath;}
     public static void setOutputPath(String outputPath) {OutputPath = outputPath;}
     public static int getNumberOfArtists() {return NumberOfArtists;}
     public static void setNumberOfArtists(int numberOfArtists) {NumberOfArtists = numberOfArtists;}
+
+
     public static void main(String[] args)
     {
 
         int IfRunAgain = 1;
 
-        try(Scanner Keyboard = new Scanner(System.in))
+        try
         {
             File file = new File(args[0]);
             setOutputPath(args[1]);
@@ -58,8 +64,8 @@ public class Main
 
                     System.out.println("Welcome ! Please Choose your artist :\n1) Taylor Swift \n2) Madison Beer");
                     System.out.print("----->");
-                    int ArtistPick = Keyboard.nextInt();
-                    InputCheck(1,2,Keyboard,ArtistPick);
+                    int ArtistPick = getKeyboard().nextInt();
+                    InputCheck(1,2,ArtistPick);
                     Artist ChosenArtist = ArtistsArray[ArtistPick];
                     System.out.println("Pick one of the options :\n0) to get a random "+ArtistsArray[ArtistPick].getArtistName()+" song\n1) to look up a word \n2) to get Songs/Albums length information \n3) to get information about amount of words");
                     System.out.println("4) get information about explicit songs");
@@ -69,22 +75,22 @@ public class Main
                     System.out.println("8) Create a CVS file for "+ArtistsArray[ArtistPick].getArtistName()+"'s discography");
                     System.out.print("----->");
                     MainPick = Keyboard.nextInt();
-                    InputCheck(0,8,Keyboard,MainPick);
+                    InputCheck(0,8,MainPick);
                     if(MainPick == 1)//The user picked to look up a word
                     {
                         System.out.println("\nPlease enter the word you'd like to search : ");
                         System.out.print("----->");
-                        String word = Keyboard.next();
+                        String word = getKeyboard().next();
 
                         System.out.println("In which album would you like to search ? choose 1-" + ArtistsArray[ArtistPick].getNumOfAlbums() + " or 0 for the entire discography :");
                         ChosenArtist.PrintAlbums();
                         System.out.print("----->");
-                        int AlbumPick = Keyboard.nextInt();
-                        InputCheck(0, ArtistsArray[ArtistPick].getNumOfAlbums(), Keyboard,AlbumPick);
+                        int AlbumPick = getKeyboard().nextInt();
+                        InputCheck(0, ArtistsArray[ArtistPick].getNumOfAlbums(),AlbumPick);
                         if (AlbumPick == 0)// The user picked to search in the entire discography
                         {
                             System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
-                            int FileChoice = Keyboard.nextInt();
+                            int FileChoice = getKeyboard().nextInt();
                             if(FileChoice == 1)//The user chose to create a summary file.
                                 ChosenArtist.WordCounterInDiscographySummaryFile(word);
 
@@ -99,8 +105,8 @@ public class Main
                             System.out.println("In which song would you like to search ? pick 1-" + ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs() + " or 0 for the entire album :");
                             ChosenArtist.PrintAlbumsTracks(AlbumPick);
                             System.out.print("----->");
-                            int SongChoice = Keyboard.nextInt();
-                            InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),Keyboard,SongChoice);
+                            int SongChoice = getKeyboard().nextInt();
+                            InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),SongChoice);
                             if (SongChoice > 0) //The user picked a specific song
                             {
                                 counter = ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetSongsArray()[SongChoice].WordCounterInSong(word);
@@ -112,8 +118,8 @@ public class Main
                                 int FileChoice;
                                 System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no : ");
                                 System.out.print("----->");
-                                FileChoice = Keyboard.nextInt();
-                                InputCheck(0,1,Keyboard,FileChoice);
+                                FileChoice = getKeyboard().nextInt();
+                                InputCheck(0,1,FileChoice);
                                 if(FileChoice == 1)//If the user wants to create a file
                                     ArtistsArray[ArtistPick].getDiscography()[AlbumPick].WordCounterInAlbumSummaryFile(word);
                                 else //if the user doesn't want to create a file
@@ -123,7 +129,7 @@ public class Main
                                 }
                             }
                         }
-                        Keyboard.nextLine();
+                        getKeyboard().nextLine();
                     }
                     else if(MainPick == 0)// The user chose to get a random taylor song
                     {
@@ -134,21 +140,21 @@ public class Main
                     {
                         System.out.println("Would you like to get duration info (1) or song average info (2)? ");
                         System.out.println("----->");
-                        int SubPick = Keyboard.nextInt();
-                        InputCheck(1,2,Keyboard,SubPick);
+                        int SubPick = getKeyboard().nextInt();
+                        InputCheck(1,2,SubPick);
                         if(SubPick == 1)//The user chooses to get duration information
                         {
                             System.out.println("Please choose an album or press 0 for the entire discography :");
                             ChosenArtist.PrintAlbums();
                             System.out.println("----->");
-                            int choice = Keyboard.nextInt();
-                            InputCheck(0, ChosenArtist.getNumOfAlbums(),Keyboard,choice);
+                            int choice = getKeyboard().nextInt();
+                            InputCheck(0, ChosenArtist.getNumOfAlbums(),choice);
                             if(choice == 0)//The user chooses Duration information for the entire discography
                             {
                                 System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
                                 System.out.println("----->");
-                                int FileChoice = Keyboard.nextInt();
-                                InputCheck(0,1,Keyboard,FileChoice);
+                                int FileChoice = getKeyboard().nextInt();
+                                InputCheck(0,1,FileChoice);
                                 if(FileChoice == 0)//The user chose to not create a file
                                 {
                                     Song[] res = ChosenArtist.DurationOfDiscography();
@@ -167,8 +173,8 @@ public class Main
                             {
                                 System.out.println("Please choose a song or press 0 for the entire album :");
                                 ChosenArtist.PrintAlbumsTracks(choice);
-                                int input = Keyboard.nextInt();
-                                InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[choice].GetNumOfSongs(),Keyboard,input);
+                                int input = getKeyboard().nextInt();
+                                InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[choice].GetNumOfSongs(),input);
                                 if(input == 0)//The user wants information about the whole album
                                     ArtistsArray[ArtistPick].getDiscography()[choice].LongestAndShortestSongsInAlbum();
 
@@ -184,8 +190,8 @@ public class Main
                             System.out.println("Please choose an album or press 0 for the entire discography :");
                             ChosenArtist.PrintAlbums();
                             System.out.println("----->");
-                            int AlbumPick = Keyboard.nextInt();
-                            InputCheck(0,ChosenArtist.getNumOfAlbums(),Keyboard,AlbumPick);
+                            int AlbumPick = getKeyboard().nextInt();
+                            InputCheck(0,ChosenArtist.getNumOfAlbums(),AlbumPick);
                             if(AlbumPick == 0)//If the user chooses the entire discography
                                 ChosenArtist.AvgSongLengthInDiscography();
                             else//If the user chooses a specific album
@@ -201,14 +207,14 @@ public class Main
                         System.out.println("Please choose an album or press 0 for the entire discography :");
                         ChosenArtist.PrintAlbums();
                         System.out.println("----->");
-                        int AlbumPick = Keyboard.nextInt();
-                        InputCheck(0,ChosenArtist.getNumOfAlbums(),Keyboard,AlbumPick);
+                        int AlbumPick = getKeyboard().nextInt();
+                        InputCheck(0,ChosenArtist.getNumOfAlbums(),AlbumPick);
                         if(AlbumPick == 0)//If the user chooses the entire discography
                         {
                             System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
                             System.out.println("----->");
-                            int FileChoice = Keyboard.nextInt();
-                            Main.InputCheck(0,1,Keyboard,FileChoice);
+                            int FileChoice = getKeyboard().nextInt();
+                            Main.InputCheck(0,1,FileChoice);
                             if(FileChoice == 0)//The user doesn't want to create a summary file
                                 System.out.println("There are "+ChosenArtist.NumOfWordsInDiscography()+" words in "+ArtistsArray[ArtistPick]+"'s entire discography.");
                             else if(FileChoice == 1)//The user wants to create a summary file
@@ -219,14 +225,14 @@ public class Main
                             System.out.println("Please choose a song or press 0 for the entire album :");
                             ChosenArtist.PrintAlbumsTracks(AlbumPick);
                             System.out.println("----->");
-                            int SongPick = Keyboard.nextInt();
-                            InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),Keyboard,SongPick);
+                            int SongPick = getKeyboard().nextInt();
+                            InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),SongPick);
                             if(SongPick == 0)//The user chooses to get information about the whole album
                             {
                                 System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
                                 System.out.println("----->");
-                                int FileChoice = Keyboard.nextInt();
-                                InputCheck(0,1,Keyboard,FileChoice);
+                                int FileChoice = getKeyboard().nextInt();
+                                InputCheck(0,1,FileChoice);
                                 if(FileChoice == 0)//The user doesn't want to create a summary file
                                 {
                                     int AlbumCounter = ArtistsArray[ArtistPick].getDiscography()[AlbumPick].NumOfWordsInAlbum();
@@ -243,19 +249,19 @@ public class Main
                     {
                         System.out.println("Would you like to get information about obscenities (1) or about the amount of explicit songs (2)? ");
                         System.out.println("----->");
-                        int SubPick = Keyboard.nextInt();
-                        InputCheck(1,2,Keyboard,SubPick);
+                        int SubPick = getKeyboard().nextInt();
+                        InputCheck(1,2,SubPick);
                         if(SubPick == 2)//The user chose to get information about songs with the explicit tag.
                         {
                             System.out.println("Please choose an album or press 0 for the entire discography :");
                             ChosenArtist.PrintAlbums();
                             System.out.println("----->");
-                            int AlbumPick = Keyboard.nextInt();
-                            InputCheck(0,ChosenArtist.getNumOfAlbums(),Keyboard,AlbumPick);
+                            int AlbumPick = getKeyboard().nextInt();
+                            InputCheck(0,ChosenArtist.getNumOfAlbums(),AlbumPick);
                             System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
                             System.out.println("----->");
-                            int FileChoice = Keyboard.nextInt();
-                            InputCheck(0,1,Keyboard,FileChoice);
+                            int FileChoice = getKeyboard().nextInt();
+                            InputCheck(0,1,FileChoice);
                             ArrayList<ArrayList<Song>> DiscographyExplicits = ChosenArtist.CountExplicitsInDiscography();
                             if(AlbumPick == 0)//The user chooses to get information about the entire discography.
                             {
@@ -270,8 +276,8 @@ public class Main
                                 System.out.println("Please choose a song or press 0 for the entire album :");
                                 ChosenArtist.PrintAlbumsTracks(AlbumPick);
                                 System.out.println("----->");
-                                int SongPick = Keyboard.nextInt();
-                                InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),Keyboard,SongPick);
+                                int SongPick = getKeyboard().nextInt();
+                                InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),SongPick);
                                 if(SongPick == 0)//The user chooses to get information about the entire album.
                                 {
                                     if(FileChoice == 0) //The user doesn't want to create a summary file
@@ -301,12 +307,12 @@ public class Main
                             System.out.println("Please choose an album or press 0 for the entire discography :");
                             ChosenArtist.PrintAlbums();
                             System.out.println("----->");
-                            int AlbumPick = Keyboard.nextInt();
-                            InputCheck(0,ChosenArtist.getNumOfAlbums(),Keyboard,AlbumPick);
+                            int AlbumPick = getKeyboard().nextInt();
+                            InputCheck(0,ChosenArtist.getNumOfAlbums(),AlbumPick);
                             System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
                             System.out.println("----->");
-                            int FileChoice = Keyboard.nextInt();
-                            InputCheck(0,1,Keyboard,FileChoice);
+                            int FileChoice = getKeyboard().nextInt();
+                            InputCheck(0,1,FileChoice);
                             if(AlbumPick == 0)//The user chose to get information about the entire discography.
                             {
                                 if(FileChoice == 0)//The user chose to not create a summary file.
@@ -323,8 +329,8 @@ public class Main
                                 System.out.println("Please choose a song or press 0 for the entire album :");
                                 ChosenArtist.PrintAlbumsTracks(AlbumPick);
                                 System.out.println("----->");
-                                int SongPick = Keyboard.nextInt();
-                                InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),Keyboard,SongPick);
+                                int SongPick = getKeyboard().nextInt();
+                                InputCheck(0,ArtistsArray[ArtistPick].getDiscography()[AlbumPick].GetNumOfSongs(),SongPick);
                                 if(SongPick == 0)//The user chose to get information about the whole album.
                                 {
                                     if(FileChoice == 0)//The user chose to not create a summary file.
@@ -346,14 +352,14 @@ public class Main
                         System.out.println("Please choose an aspect to compare :\n0) Every aspect \n1) Number of appearances of a word \n2) Length information \n3) Number of words");
                         System.out.println("4) Number of explicit songs \n5) Number of obscenities ");
                         System.out.print("----->");
-                        int AspectPick = Keyboard.nextInt();
-                        InputCheck(0,5,Keyboard,AspectPick);
+                        int AspectPick = getKeyboard().nextInt();
+                        InputCheck(0,5,AspectPick);
                         if(AspectPick == 0)//The user chose to compare every aspect
                         {
                             System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
                             System.out.println("----->");
-                            int FileChoice = Keyboard.nextInt();
-                            InputCheck(0,1,Keyboard,FileChoice);
+                            int FileChoice = getKeyboard().nextInt();
+                            InputCheck(0,1,FileChoice);
                             if(FileChoice == 0)//The user chose to not produce a summary file
                                 Compare2Artists(ArtistsArray[0],ArtistsArray[1]);
                             else//The user chose to create a summary file
@@ -363,15 +369,13 @@ public class Main
                         {
                             System.out.println("\nPlease enter the word you'd like to search : ");
                             System.out.print("----->");
-                            String word = Keyboard.next();
+                            String word = getKeyboard().next();
                             int TaylorCounter = ArtistsArray[0].WordCounterInDiscography(word);
                             int MadisonCounter = ArtistsArray[1].WordCounterInDiscography(word);
                             System.out.println("The word "+word+" appears "+TaylorCounter+" times in Taylor's discography, and"+MadisonCounter+" times in Madison's discography.");
                         }
                         else if(AspectPick == 2)//The user chose to get length information
                         {
-                            int TaylorDuration = ArtistsArray[0].getDiscographyDurationInSec();
-                            int MadisonDuration = ArtistsArray[1].getDiscographyDurationInSec();
                             System.out.println("Taylor's discography length is "+ArtistsArray[0].getDiscographyDurationHours()+"h "+ArtistsArray[0].getDiscographyDurationMin()+"m and "+ArtistsArray[0].getDiscographyDurationSec()+"s ");
                             System.out.println("Madison's discography length is "+ArtistsArray[1].getDiscographyDurationHours()+"h "+ArtistsArray[1].getDiscographyDurationMin()+"m and "+ArtistsArray[1].getDiscographyDurationSec()+"s ");
                         }
@@ -404,7 +408,7 @@ public class Main
 
                     System.out.println("Would you like to go again ? choose any number to continue or 0 to exit ");
                     System.out.print("----->");
-                    IfRunAgain = Keyboard.nextInt();
+                    IfRunAgain = getKeyboard().nextInt();
                 }
         } catch (Exception e) {
             System.out.println("Something went wrong.");
@@ -412,6 +416,7 @@ public class Main
         }
 
         System.out.println("I'll tell you the truth, but never goodbye");
+        getKeyboard().close();
 
     }
 
@@ -449,16 +454,16 @@ public class Main
         Scanner s = new Scanner((System.in));
         System.out.println("Please enter your birthday month (1-12):");
         int month = s.nextInt();
-        InputCheck(1,12,s,month);
+        InputCheck(1,12,month);
         System.out.println("Please enter your birthday day (1-31):");
         int day = s.nextInt();
-        InputCheck(1,31,s,day);
+        InputCheck(1,31,day);
         try{
             Song birthdaySong = artist.getDiscography()[month].GetSongsArray()[day];
             System.out.println("Your birthday song is "+birthdaySong.GetSongName()+" !");
         } catch (IndexOutOfBoundsException e) {
             day /= 2.6; //A slight change to allow for short albums to be included.
-            //Its to make sure that for example December 31st would just land on the last song on the 12th album rather than get a random one.
+            //It's to make sure that for example December 31st would just land on the last song on the 12th album rather than get a random one.
             Song birthdaySong = artist.getDiscography()[month].GetSongsArray()[day];
             System.out.println("Your birthday song is " + birthdaySong.GetSongName() + " !");
         }
@@ -501,13 +506,13 @@ public class Main
     }
 
 
-    public static void InputCheck(int MinAllowed,int MaxAllowed,Scanner Keyboard,int input)//This method ensures the input is within range.
+    public static void InputCheck(int MinAllowed,int MaxAllowed,int input)//This method ensures the input is within range.
     {
         while(!((input >= MinAllowed)&&(input <= MaxAllowed)))
         {
             System.out.println("Invalid input, Please try again.");
             System.out.print("----->");
-            input = Keyboard.nextInt();
+            input = Main.getKeyboard().nextInt();
         }
     }
 

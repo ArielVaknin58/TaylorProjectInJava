@@ -377,9 +377,8 @@ public class Artist {
     {
         System.out.println("Would you like to create a summary file ? press 1 for yes / 0 for no");
         System.out.print("----->");
-        Scanner Keyboard = new Scanner(System.in);
-        int FileChoice = Keyboard.nextInt();
-        Main.InputCheck(0,1,Keyboard,FileChoice);
+        int FileChoice = Main.getKeyboard().nextInt();
+        Main.InputCheck(0,1,FileChoice);
         if(FileChoice == 0)//The user chose to not create a summary file.
         {
             int TotalAvgAccumulator = 0;

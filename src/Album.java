@@ -105,10 +105,9 @@ public class Album {
 
     public void LongestAndShortestSongsInAlbum() throws IOException//This method finds the longest and shortest songs in a given album.
     {
-        Scanner Keyboard = new Scanner(System.in);
         System.out.println("Would you like a summary report ? 1 for yes / 0 for no :");
-        int choice = Keyboard.nextInt();
-        Main.InputCheck(0,1,Keyboard,choice);
+        int choice = Main.getKeyboard().nextInt();
+        Main.InputCheck(0,1,choice);
 
         Song[] array = this.GetSongsArray();
         Song MaxSong = array[1];
@@ -286,7 +285,8 @@ public class Album {
         album = Album.GetAlbumDetails(album.GetFile(),album.GetAlbumNumber(),ArtistNum);
         Song[] AlbumArray = new Song[album.GetNumOfSongs() + 1];
         Scanner AlbumReader = new Scanner(album.GetFile());
-        String temp = AlbumReader.nextLine();
+        AlbumReader.nextLine();
+        String temp;
         for(int i = 1; i <= album.GetNumOfSongs() ; i++)
         {
             Song song;

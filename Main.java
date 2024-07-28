@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 1)  Implement a GUI
 2)
 3)  ** Comparisons between the artists **
-4)
+4)  add sounds
 5)
 6)
 
@@ -22,12 +22,13 @@ public class Main
     private static int NumberOfArtists;
     public static int getNumberOfArtists() {return NumberOfArtists;}
     public static void setNumberOfArtists(int numberOfArtists) {NumberOfArtists = numberOfArtists;}
-    public static void main(String[] args)
+    //public static Scanner Keyboard = new Scanner(System.in);
+  //  public static void main(String[] args)
     {
 
         int IfRunAgain = 1;
 
-        try(Scanner Keyboard = new Scanner(System.in))
+        try
         {
             File file = new File(args[0]);
             Scanner Reader = new Scanner(file);
